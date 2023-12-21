@@ -8,7 +8,7 @@
 
 html,
 body {
-  font-family: 'system-ui', sans-serif;
+  font-family: system-ui, sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--secondary-color);

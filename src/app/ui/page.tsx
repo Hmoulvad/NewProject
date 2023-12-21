@@ -2,7 +2,6 @@ import styles from "./styles.module.css";
 
 import Button from "@/components/UI/Button";
 import Link from "@/components/UI/Link";
-import LinkAsButton from "@/components/UI/Link/Button";
 import Typography from "@/components/UI/Typography";
 
 export default function UIPage() {
