@@ -1,13 +1,16 @@
 import NextLink, { LinkProps } from "next/link";
-import styles from "./styles.module.css";
+import { ButtonProps, button } from "./shared";
 
-type Props = {
-  children: React.ReactNode;
-} & Omit<LinkProps, "className">;
+type Props = ButtonProps & Omit<LinkProps, "className">;
 
-export default function ButtonAsLink({ children, ...rest }: Props) {
+export default function ButtonAsLink({
+  children,
+  variant,
+  size,
+  ...rest
+}: Props) {
   return (
-    <NextLink className={styles.button} {...rest}>
+    <NextLink className={button({ variant, size })} {...rest}>
       {children}
     </NextLink>
   );

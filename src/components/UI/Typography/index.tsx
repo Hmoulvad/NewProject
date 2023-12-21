@@ -7,7 +7,10 @@ const typography = cva(styles.base, {
       display1: styles.display1,
       display2: styles.display2,
       display3: styles.display3,
+      display4: styles.display4,
+      display5: styles.display5,
       body: styles.body,
+      caption: styles.caption,
     },
   },
   defaultVariants: {
@@ -16,7 +19,7 @@ const typography = cva(styles.base, {
 });
 
 type Props = {
-  as: React.ElementType;
+  as?: React.ElementType;
 } & VariantProps<typeof typography> &
   Omit<React.HTMLAttributes<HTMLElement>, "className">;
 

@@ -1,12 +1,13 @@
-import styles from "./styles.module.css";
+import { ButtonProps, button } from "./shared";
 
-type Props = {
-  children: React.ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-export default function Button({ children, ...rest }: Props) {
+export default function Button({
+  children,
+  variant,
+  size,
+  ...rest
+}: ButtonProps) {
   return (
-    <button className={styles.button} {...rest}>
+    <button className={button({ variant, size })} {...rest}>
       {children}
     </button>
   );
