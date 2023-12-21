@@ -1,6 +1,7 @@
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
+  --color-link: #0070f3;
 }
 
 * {
