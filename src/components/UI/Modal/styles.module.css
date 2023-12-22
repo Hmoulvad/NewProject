@@ -9,7 +9,7 @@
 
   &[open] {
     &::backdrop {
-      animation: backdrop-fade var(--timing-medium) ease forwards;
+      animation: backdrop-fade 0.4 ease forwards;
     }
   }
 }
