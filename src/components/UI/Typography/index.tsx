@@ -1,7 +1,7 @@
-import styles from "./styles.module.css";
 import { cva, type VariantProps } from "class-variance-authority";
+import styles from "./styles.module.css";
 
-const typography = cva(styles.base, {
+const TypographyStyles = cva(styles.base, {
   variants: {
     variant: {
       display1: styles.display1,
@@ -20,13 +20,13 @@ const typography = cva(styles.base, {
 
 type Props = {
   as?: React.ElementType;
-} & VariantProps<typeof typography> &
+} & VariantProps<typeof TypographyStyles> &
   Omit<React.HTMLAttributes<HTMLElement>, "className">;
 
 export default function Typography({ as, children, variant, ...rest }: Props) {
   const Tag = as ?? "p";
   return (
-    <Tag className={typography({ variant })} {...rest}>
+    <Tag className={TypographyStyles({ variant })} {...rest}>
       {children}
     </Tag>
   );

@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { cva, type VariantProps } from "class-variance-authority";
 
-export const button = cva(styles.button, {
+export const ButtonStyles = cva(styles.button, {
   variants: {
     variant: {
       primary: styles.primary,
@@ -12,12 +12,18 @@ export const button = cva(styles.button, {
       medium: styles.medium,
       large: styles.large,
     },
+    withIcon: {
+      true: styles.withIcon,
+    },
   },
   defaultVariants: {
     variant: "primary",
     size: "medium",
+    withIcon: false,
   },
 });
 
-export type ButtonProps = VariantProps<typeof button> &
+export type ButtonProps = { icon?: React.ReactNode } & VariantProps<
+  typeof ButtonStyles
+> &
   Omit<React.HTMLAttributes<HTMLElement>, "className">;

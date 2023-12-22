@@ -1,17 +1,21 @@
 import NextLink, { LinkProps } from "next/link";
-import { ButtonProps, button } from "./shared";
+import { ButtonProps, ButtonStyles } from "./shared";
+import Typography from "../Typography";
 
 type Props = ButtonProps & Omit<LinkProps, "className">;
 
 export default function ButtonAsLink({
   children,
-  variant,
+  icon,
   size,
+  variant,
+  withIcon,
   ...rest
 }: Props) {
   return (
-    <NextLink className={button({ variant, size })} {...rest}>
-      {children}
+    <NextLink className={ButtonStyles({ variant, size, withIcon })} {...rest}>
+      <Typography as="span">{children}</Typography>
+      {icon && icon}
     </NextLink>
   );
 }
