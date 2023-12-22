@@ -2,6 +2,10 @@
   color: var(--primary-color); 
 }
 
+.inverted {
+  color: var(--secondary-color);
+}
+
 .display1 {
   font-size: 6rem;
   font-weight: 600;

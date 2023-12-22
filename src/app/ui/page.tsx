@@ -5,6 +5,7 @@ import Button from "@/components/UI/Button";
 import IconButton from "@/components/UI/IconButton";
 import Link from "@/components/UI/Link";
 import Typography from "@/components/UI/Typography";
+import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
 
 export default function UIPage() {
   return (
@@ -90,6 +91,9 @@ export default function UIPage() {
         <IconButton size="large" variant="secondary">
           <SSR.Basket />
         </IconButton>
+      </section>
+      <section>
+        <ToggleModalExample />
       </section>
     </main>
   );

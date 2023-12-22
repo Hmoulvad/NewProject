@@ -1,0 +1,28 @@
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;;
+  width: 40rem;
+  height: 40rem;
+  margin: auto;
+  border: none;
+  padding: 1rem;
+  background-color: var(--primary-color);
+
+  &[open] {
+    display: flex;
+
+    &::backdrop {
+      animation: backdrop-fade 0.5s ease forwards;
+    }
+  }
+}
+
+@keyframes backdrop-fade {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

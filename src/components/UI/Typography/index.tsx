@@ -12,9 +12,13 @@ const TypographyStyles = cva(styles.base, {
       body: styles.body,
       caption: styles.caption,
     },
+    inverted: {
+      true: styles.inverted,
+    },
   },
   defaultVariants: {
     variant: "body",
+    inverted: false,
   },
 });
 
@@ -23,10 +27,16 @@ type Props = {
 } & VariantProps<typeof TypographyStyles> &
   Omit<React.HTMLAttributes<HTMLElement>, "className">;
 
-export default function Typography({ as, children, variant, ...rest }: Props) {
+export default function Typography({
+  as,
+  children,
+  variant,
+  inverted,
+  ...rest
+}: Props) {
   const Tag = as ?? "p";
   return (
-    <Tag className={TypographyStyles({ variant })} {...rest}>
+    <Tag className={TypographyStyles({ variant, inverted })} {...rest}>
       {children}
     </Tag>
   );
