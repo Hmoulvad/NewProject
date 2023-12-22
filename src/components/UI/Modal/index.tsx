@@ -2,10 +2,23 @@
 
 import React, { forwardRef, useEffect, useImperativeHandle } from "react";
 import styles from "./styles.module.css";
+import { VariantProps, cva } from "class-variance-authority";
+
+const ModalStyles = cva(styles.modal, {
+  variants: {
+    variant: {
+      center: styles.center,
+      sideBar: styles.sideBar,
+    },
+  },
+  defaultVariants: {
+    variant: "center",
+  },
+});
 
 type Props = {
   children: React.ReactNode;
-};
+} & VariantProps<typeof ModalStyles>;
 
 export type ModalOperations = {
   open: () => void;
@@ -13,7 +26,7 @@ export type ModalOperations = {
 };
 
 const Modal = forwardRef<ModalOperations, Props>(function ModalRef(
-  { children },
+  { children, variant },
   ref
 ) {
   const dialogRef = React.useRef<HTMLDialogElement>(null);
@@ -51,7 +64,7 @@ const Modal = forwardRef<ModalOperations, Props>(function ModalRef(
   }, []);
 
   return (
-    <dialog ref={dialogRef} className={styles.modal}>
+    <dialog ref={dialogRef} className={ModalStyles({ variant })}>
       {children}
     </dialog>
   );

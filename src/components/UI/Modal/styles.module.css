@@ -1,20 +1,39 @@
 .modal {
   display: none;
-  position: fixed;
-  inset: 0;;
-  width: 40rem;
-  height: 40rem;
-  margin: auto;
-  border: none;
-  padding: 1rem;
   background-color: var(--primary-color);
+  border: none;
+  max-height: 100vh;
 
   &[open] {
     display: flex;
 
     &::backdrop {
-      animation: backdrop-fade 0.3s ease forwards;
+      animation: backdrop-fade 0.4s ease forwards;
     }
+  }
+}
+
+.center {
+  inset: 0;
+  width: 30rem;
+  height: 30rem;
+  max-width: 80vw;
+  max-height: 80vh;
+  margin: auto;
+  background-color: var(--primary-color);
+
+  &[open] {
+    animation: modal-center-entry 0.4s ease forwards;
+  }
+}
+
+.sideBar {
+  inset: 0;
+  margin-left: auto;
+  height: 100vh;
+
+  &[open] {
+    animation: modal-sidebar-entry 0.4s ease forwards;
   }
 }
 
@@ -24,5 +43,27 @@
   }
   to {
     background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes modal-sidebar-entry {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+   opacity: 1;
+   width: 30rem;
+  }
+}
+
+@keyframes modal-center-entry {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+   opacity: 1;
+   transform: scale(1);
   }
 }
