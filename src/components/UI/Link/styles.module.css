@@ -11,6 +11,6 @@
   letter-spacing: 0.00938em;
 
   &:hover {
-    color:  var(--color-link);
+    color:  var(--link-color);
   }
 }

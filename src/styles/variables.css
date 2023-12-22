@@ -1,7 +1,13 @@
 :root {
+  /* Colors */
   --primary-color: #000;
   --secondary-color: #fff;
-  --color-link: #0070f3;
+  --link-color: #0070f3;
+
+  /* Animation timngs */
+  --timing-short: .2s;
+  --timing-medium: .4s;
+  --timing-long: .6s;
 }
 
 @media (prefers-color-scheme: dark) {

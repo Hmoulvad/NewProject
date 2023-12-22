@@ -13,7 +13,7 @@ export default function ToggleModalExample() {
       <Button variant="secondary" onClick={() => modalRef.current?.open()}>
         Open Modal
       </Button>
-      <Modal variant="center" ref={modalRef}>
+      <Modal variant="sidebar" ref={modalRef}>
         <Typography variant="display4" inverted>
           This is some content of the Modal
         </Typography>

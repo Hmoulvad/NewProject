@@ -3,12 +3,13 @@
   background-color: var(--primary-color);
   border: none;
   max-height: 100vh;
+  padding: 1rem ;
 
   &[open] {
     display: flex;
 
     &::backdrop {
-      animation: backdrop-fade 0.4s ease forwards;
+      animation: backdrop-fade var(--timing-medium) ease forwards;
     }
   }
 }
@@ -23,17 +24,17 @@
   background-color: var(--primary-color);
 
   &[open] {
-    animation: modal-center-entry 0.4s ease forwards;
+    animation: modal-center-entry var(--timing-medium) ease forwards;
   }
 }
 
-.sideBar {
+.sidebar {
   inset: 0;
   margin-left: auto;
   height: 100vh;
 
   &[open] {
-    animation: modal-sidebar-entry 0.4s ease forwards;
+    animation: modal-sidebar-entry var(--timing-medium) ease forwards;
   }
 }
 

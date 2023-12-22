@@ -8,7 +8,7 @@ const ModalStyles = cva(styles.modal, {
   variants: {
     variant: {
       center: styles.center,
-      sideBar: styles.sideBar,
+      sidebar: styles.sidebar,
     },
   },
   defaultVariants: {
