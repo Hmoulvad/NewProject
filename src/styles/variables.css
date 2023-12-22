@@ -5,9 +5,9 @@
   --link-color: #0070f3;
 
   /* Animation timngs */
-  --timing-short: .2s;
-  --timing-medium: .4s;
-  --timing-long: .6s;
+  --timing-short: 0.2s;
+  --timing-medium: 0.4s;
+  --timing-long: 0.6s;
 }
 
 @media (prefers-color-scheme: dark) {
