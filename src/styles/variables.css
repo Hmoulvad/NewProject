@@ -8,6 +8,10 @@
   --timing-short: 0.2s;
   --timing-medium: 0.4s;
   --timing-long: 0.6s;
+
+  /* Breakpoints */
+  --mobile-breakpoint: 480px;
+  --tablet-breakpoint: 768px;
 }
 
 @media (prefers-color-scheme: dark) {
