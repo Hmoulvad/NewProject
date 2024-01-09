@@ -1,13 +1,14 @@
 import NextLink, { LinkProps } from "next/link";
 import styles from "./styles.module.css";
+import clsx from "clsx";
 
 type Props = {
   children: React.ReactNode;
-} & Omit<LinkProps, "className">;
+} & LinkProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
-export default function Link({ children, ...rest }: Props) {
+export default function Link({ children, className, ...rest }: Props) {
   return (
-    <NextLink className={styles.link} {...rest}>
+    <NextLink className={clsx(styles.link, className)} {...rest}>
       {children}
     </NextLink>
   );
