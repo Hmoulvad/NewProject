@@ -10,7 +10,7 @@ export default function Accordion({ title, children }: Props) {
   return (
     <details className={styles.details}>
       <summary>
-        <Typography>{title}</Typography>
+        <Typography variant="display5">{title}</Typography>
       </summary>
       {children}
     </details>

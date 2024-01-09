@@ -1,15 +1,2 @@
+@import url("./reset.css");
 @import url("./variables.css");
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  font-family: system-ui, sans-serif;
-  max-width: 100vw;
-  overflow-x: hidden;
-  background-color: var(--secondary-color);
-}

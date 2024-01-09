@@ -1,10 +1,13 @@
 .details {
   width: 100%;
+  border: 1px solid white;
+  min-height: 4rem;
+  padding: 1rem;
 
   summary {
     display: block;
     cursor: pointer;
-    transition: margin var(--timing-medium) ease;
+    transition: margin var(--timing-long) ease;
   }
 
   summary::-webkit-details-marker {
