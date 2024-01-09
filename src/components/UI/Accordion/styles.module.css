@@ -5,6 +5,8 @@
   padding: 1rem;
 
   summary {
+    margin: -1rem;
+    padding: 1rem;
     display: block;
     cursor: pointer;
     transition: margin var(--timing-long) ease;
@@ -16,7 +18,7 @@
 
   &[open] {
     summary {
-      margin-bottom: 1rem;
+      margin-bottom: 0;
     }
   }
 }

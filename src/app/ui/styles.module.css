@@ -8,6 +8,5 @@
 .container section {
   display: grid;
   gap: 1rem;
-  width: 100%;
   justify-content: center;
 }
