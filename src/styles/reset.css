@@ -21,6 +21,10 @@ html {
 
 body {
   min-height: 100svh;
+}
+
+/* add padding to main */
+main {
   padding: 1rem;
 }
 
