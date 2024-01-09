@@ -43,6 +43,7 @@ p {
   text-wrap: pretty;
 }
 
+/* adding scroll behaviour smooth if reduced motion isn't selected */
 @media(prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
