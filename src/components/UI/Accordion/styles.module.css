@@ -1,0 +1,19 @@
+.details {
+  width: 100%;
+
+  summary {
+    display: block;
+    cursor: pointer;
+    transition: margin var(--timing-medium) ease;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  &[open] {
+    summary {
+      margin-bottom: 1rem;
+    }
+  }
+}

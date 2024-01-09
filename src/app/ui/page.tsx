@@ -6,6 +6,7 @@ import IconButton from "@/components/UI/IconButton";
 import Link from "@/components/UI/Link";
 import Typography from "@/components/UI/Typography";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
+import Accordion from "@/components/UI/Accordion";
 
 export default function UIPage() {
   return (
@@ -91,6 +92,16 @@ export default function UIPage() {
         <IconButton size="large" variant="secondary">
           <SSR.Basket />
         </IconButton>
+      </section>
+      <section>
+        <Accordion title="This is a modal">
+          <Typography>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
+            repellat blanditiis neque iure quisquam velit enim necessitatibus
+            deserunt quo facilis? Veritatis nulla quasi illum aspernatur,
+            numquam aliquam autem laborum repellendus!
+          </Typography>
+        </Accordion>
       </section>
       <section>
         <ToggleModalExample />
