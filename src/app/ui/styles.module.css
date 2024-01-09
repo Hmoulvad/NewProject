@@ -6,9 +6,8 @@
 }
 
 .container section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1rem;
   width: 100%;
-  align-items: center;
+  justify-content: center;
 }
