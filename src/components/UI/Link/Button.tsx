@@ -6,7 +6,7 @@ type Props = {
 
 export default function LinkAsButton({ children, ...rest }: Props) {
   return (
-    <button className={styles.link} {...rest}>
+    <button aria-label={typeof children === "string" ? children as string : ""} className={styles.link} {...rest}>
       {children}
     </button>
   );

@@ -15,7 +15,7 @@ export default function ButtonAsLink({
   ...rest
 }: Props) {
   return (
-    <NextLink className={clsx(ButtonStyles({ variant, size, withIcon }), className)} {...rest}>
+    <NextLink title={typeof children === "string" ? children as string : ""} className={clsx(ButtonStyles({ variant, size, withIcon }), className)} {...rest}>
       <Typography as="span">{children}</Typography>
       {icon && icon}
     </NextLink>

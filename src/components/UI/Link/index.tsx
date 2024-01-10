@@ -8,7 +8,7 @@ type Props = {
 
 export default function Link({ children, className, ...rest }: Props) {
   return (
-    <NextLink className={clsx(styles.link, className)} {...rest}>
+    <NextLink title={typeof children === "string" ? children as string : ""} className={clsx(styles.link, className)} {...rest}>
       {children}
     </NextLink>
   );
