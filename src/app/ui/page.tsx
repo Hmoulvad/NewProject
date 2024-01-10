@@ -1,6 +1,5 @@
 import styles from "./styles.module.css";
 import { SSR } from "@phosphor-icons/react";
-
 import Button from "@/components/UI/Button";
 import IconButton from "@/components/UI/IconButton";
 import Link from "@/components/UI/Link";
@@ -74,24 +73,12 @@ export default function UIPage() {
         </Button>
       </section>
       <section>
-        <IconButton size="small">
-          <SSR.Basket />
-        </IconButton>
-        <IconButton size="small" variant="secondary">
-          <SSR.Basket />
-        </IconButton>
-        <IconButton>
-          <SSR.Basket />
-        </IconButton>
-        <IconButton variant="secondary">
-          <SSR.Basket />
-        </IconButton>
-        <IconButton size="large">
-          <SSR.Basket />
-        </IconButton>
-        <IconButton size="large" variant="secondary">
-          <SSR.Basket />
-        </IconButton>
+        <IconButton size="small" icon="Basket" />
+        <IconButton size="small" variant="secondary" icon="Basket" />
+        <IconButton icon="Basket" />
+        <IconButton variant="secondary" icon="Basket" />
+        <IconButton size="large" icon="Basket" />
+        <IconButton size="large" variant="secondary" icon="Basket" />
       </section>
       <section>
         <Accordion title="This is a modal">

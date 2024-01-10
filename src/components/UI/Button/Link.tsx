@@ -14,8 +14,9 @@ export default function ButtonAsLink({
   withIcon,
   ...rest
 }: Props) {
+  const fallbackTitle = typeof children === "string" ? children as string : ""
   return (
-    <NextLink title={typeof children === "string" ? children as string : ""} className={clsx(ButtonStyles({ variant, size, withIcon }), className)} {...rest}>
+    <NextLink title={fallbackTitle} className={clsx(ButtonStyles({ variant, size, withIcon }), className)} {...rest}>
       <Typography as="span">{children}</Typography>
       {icon && icon}
     </NextLink>

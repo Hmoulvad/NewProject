@@ -5,8 +5,9 @@ type Props = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export default function LinkAsButton({ children, ...rest }: Props) {
+  const fallbackAiraLabel = typeof children === "string" ? children as string : ""
   return (
-    <button aria-label={typeof children === "string" ? children as string : ""} className={styles.link} {...rest}>
+    <button aria-label={fallbackAiraLabel} className={styles.link} {...rest}>
       {children}
     </button>
   );

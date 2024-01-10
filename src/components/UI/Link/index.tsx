@@ -7,8 +7,9 @@ type Props = {
 } & LinkProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 export default function Link({ children, className, ...rest }: Props) {
+  const fallbackTitle = typeof children === "string" ? children as string : ""
   return (
-    <NextLink title={typeof children === "string" ? children as string : ""} className={clsx(styles.link, className)} {...rest}>
+    <NextLink title={fallbackTitle} className={clsx(styles.link, className)} {...rest}>
       {children}
     </NextLink>
   );
