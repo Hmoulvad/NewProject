@@ -11,6 +11,9 @@ export default function Header() {
       </NextLink>
       <ul>
         <li>
+          <Link href="/spotify">Spotify</Link>
+        </li>
+        <li>
           <Link href="/ui">UI Components</Link>
         </li>
       </ul>

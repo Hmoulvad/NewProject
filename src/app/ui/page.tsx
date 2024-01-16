@@ -3,12 +3,12 @@ import Button from "@/components/UI/Button";
 import IconButton from "@/components/UI/IconButton";
 import Link from "@/components/UI/Link";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
+import Page from "@/components/UI/Page";
 import Typography from "@/components/UI/Typography";
-import styles from "./styles.module.css";
 
 export default function UIPage() {
   return (
-    <main className={styles.container}>
+    <Page>
       <section>
         <Typography as="h1" variant="display1">
           This is a display 1...
@@ -39,12 +39,7 @@ export default function UIPage() {
         <Button size="small" withIcon icon="ArrowRight">
           This is a primary medium with icon button
         </Button>
-        <Button
-          size="small"
-          withIcon
-          icon="ArrowRight"
-          variant="secondary"
-        >
+        <Button size="small" withIcon icon="ArrowRight" variant="secondary">
           This is a secondary medium button with icon
         </Button>
         <Button>This is a primary medium button</Button>
@@ -62,12 +57,7 @@ export default function UIPage() {
         <Button size="large" withIcon icon="ArrowRight">
           This is a primary medium with icon button
         </Button>
-        <Button
-          size="large"
-          withIcon
-          icon="ArrowRight"
-          variant="secondary"
-        >
+        <Button size="large" withIcon icon="ArrowRight" variant="secondary">
           This is a secondary medium button with icon
         </Button>
       </section>
@@ -92,6 +82,6 @@ export default function UIPage() {
       <section>
         <ToggleModalExample />
       </section>
-    </main>
+    </Page>
   );
 }
