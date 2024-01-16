@@ -1,6 +1,5 @@
 import { VariantProps, cva } from "class-variance-authority";
 import styles from "./styles.module.css";
-import { SSR } from "@phosphor-icons/react";
 
 const IconButtonStyles = cva(styles.iconButton, {
   variants: {
@@ -21,21 +20,19 @@ const IconButtonStyles = cva(styles.iconButton, {
 });
 
 type Props = {
-  icon: keyof typeof SSR;
+  icon: React.ReactNode;
 } & VariantProps<typeof IconButtonStyles> &
   Omit<React.HTMLAttributes<HTMLElement>, "className" | "children">;
 
-export default function IconButton({
-  size,
-  variant,
-  icon,
-  ...rest
-}: Props) {
-  const IconComponent = SSR[icon];
+export default function IconButton({ size, variant, icon, ...rest }: Props) {
   const fallbackAriaLabel = `Button with an icon of ${icon}`;
   return (
-    <button aria-label={fallbackAriaLabel} className={IconButtonStyles({ size, variant })} {...rest}>
-      <IconComponent />
+    <button
+      aria-label={fallbackAriaLabel}
+      className={IconButtonStyles({ size, variant })}
+      {...rest}
+    >
+      {icon}
     </button>
   );
 }

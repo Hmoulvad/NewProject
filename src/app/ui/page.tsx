@@ -5,6 +5,8 @@ import Link from "@/components/UI/Link";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
 import Page from "@/components/UI/Page";
 import Typography from "@/components/UI/Typography";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
+import { Basket } from "@phosphor-icons/react/dist/ssr/Basket";
 
 export default function UIPage() {
   return (
@@ -36,38 +38,38 @@ export default function UIPage() {
         <Button variant="secondary" size="small">
           This is a secondary small button
         </Button>
-        <Button size="small" withIcon icon="ArrowRight">
+        <Button size="small" icon={<ArrowRight />}>
           This is a primary medium with icon button
         </Button>
-        <Button size="small" withIcon icon="ArrowRight" variant="secondary">
+        <Button size="small" icon={<ArrowRight />} variant="secondary">
           This is a secondary medium button with icon
         </Button>
         <Button>This is a primary medium button</Button>
         <Button variant="secondary">This is a secondary medium button</Button>
-        <Button withIcon icon="ArrowRight">
+        <Button icon={<ArrowRight />}>
           This is a primary medium with icon button
         </Button>
-        <Button withIcon icon="ArrowRight" variant="secondary">
+        <Button icon={<ArrowRight />} variant="secondary">
           This is a secondary medium button with icon
         </Button>
         <Button size="large">This is a primary large button</Button>
         <Button variant="secondary" size="large">
           This is a secondary large button
         </Button>
-        <Button size="large" withIcon icon="ArrowRight">
+        <Button size="large" icon={<ArrowRight />}>
           This is a primary medium with icon button
         </Button>
-        <Button size="large" withIcon icon="ArrowRight" variant="secondary">
+        <Button size="large" icon={<ArrowRight />} variant="secondary">
           This is a secondary medium button with icon
         </Button>
       </section>
       <section>
-        <IconButton size="small" icon="Basket" />
-        <IconButton size="small" variant="secondary" icon="Basket" />
-        <IconButton icon="Basket" />
-        <IconButton variant="secondary" icon="Basket" />
-        <IconButton size="large" icon="Basket" />
-        <IconButton size="large" variant="secondary" icon="Basket" />
+        <IconButton size="small" icon={<Basket />} />
+        <IconButton size="small" variant="secondary" icon={<Basket />} />
+        <IconButton icon={<Basket />} />
+        <IconButton variant="secondary" icon={<Basket />} />
+        <IconButton size="large" icon={<Basket />} />
+        <IconButton size="large" variant="secondary" icon={<Basket />} />
       </section>
       <section>
         <Accordion title="This is a modal">
