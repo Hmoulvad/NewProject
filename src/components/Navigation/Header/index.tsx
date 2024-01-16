@@ -1,7 +1,6 @@
-import { SSR } from "@phosphor-icons/react";
+import IconButton from "@/components/UI/IconButton";
+import Link from "@/components/UI/Link";
 import NextLink from "next/link";
-import IconButton from "../UI/IconButton";
-import Link from "../UI/Link";
 import styles from "./styles.module.css";
 
 export default function Header() {
