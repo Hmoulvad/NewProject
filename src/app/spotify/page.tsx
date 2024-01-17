@@ -10,7 +10,7 @@ export default async function Spotify() {
         <Typography as="h1" variant="display2">
           Spotify
         </Typography>
-        <div>{JSON.stringify(data)}</div>
+        {/* <div>{JSON.stringify(data)}</div> */}
       </section>
     </Page>
   );
