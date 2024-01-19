@@ -1,9 +1,9 @@
 import Page from "@/components/UI/Page";
 import Typography from "@/components/UI/Typography";
-import getAuthToken from "@/services/spotify/actions/getAuthToken";
+// import getAuthToken from "@/services/spotify/actions/getAuthToken";
 
 export default async function Spotify() {
-  const data = await getAuthToken();
+  // const data = await getAuthToken();
   return (
     <Page>
       <section>
