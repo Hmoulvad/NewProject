@@ -3,13 +3,16 @@ import Typography from "../Typography";
 import { ButtonProps, ButtonStyles } from "./shared";
 import styles from "./styles.module.css";
 
+type Props = ButtonProps &
+  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className">;
+
 export default function Button({
   children,
   icon,
   size,
   variant,
   ...rest
-}: ButtonProps) {
+}: Props) {
   const fallbackAriaLabel =
     typeof children === "string" ? (children as string) : "";
   return (

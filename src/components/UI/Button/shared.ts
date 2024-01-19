@@ -25,5 +25,4 @@ export const ButtonStyles = cva(styles.button, {
 
 export type ButtonProps = { icon?: React.ReactNode } & VariantProps<
   typeof ButtonStyles
-> &
-  Omit<React.HTMLAttributes<HTMLElement>, "className">;
+>;

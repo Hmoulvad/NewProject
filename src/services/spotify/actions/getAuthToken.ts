@@ -1,20 +1,16 @@
-import { spotifyTokenAPI } from "../api";
+import { hours } from "@/utils/time";
+import * as SpotifyAPI from "../index";
 
-type SpotifyTokenResponse = {
-  access_token: string;
-  token_type: string;
-  expires_in: number;
-};
+const body = `grant_type=client_credentials&client_id=${process.env.SPOTIFY_CLIENT_ID}&client_secret=${process.env.SPOTIFY_CLIENT_SECRET}`;
 
-export default function getAuthToken() {
-  return spotifyTokenAPI
-    .post("token", {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: `grant_type=client_credentials&client_id=${
-        process.env.SPOTIFY_CLIENT_ID ?? ""
-      }&client_secret=${process.env.SPOTIFY_CLIENT_SECRET ?? ""}`,
-    })
-    .json<SpotifyTokenResponse>();
+export default async function getAuthToken() {
+  return SpotifyAPI.AccountAPI.post("token", {
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body,
+    next: {
+      revalidate: hours(1),
+    },
+  }).json<SpotifyAPI.Types.AuthTokenResponse>();
 }
