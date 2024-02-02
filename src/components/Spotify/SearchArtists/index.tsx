@@ -1,19 +1,22 @@
-"use client";
-
 import Button from "@/components/UI/Button";
-import { SpotifyLogo } from "@phosphor-icons/react";
-import { useState } from "react";
 import styles from "./styles.module.css";
+import { SpotifyLogo } from "@phosphor-icons/react/dist/ssr/SpotifyLogo";
+import getArtist from "@/services/spotify/actions/getArtist";
+
+async function onSubmit(formData: FormData) {
+  "use server";
+  const data = await getArtist(formData.get("artist") as string);
+}
 
 export default function SearchArtist() {
-  const [searchQuery, setSearchQuery] = useState("");
-
   return (
-    <form className={styles.form}>
+    <form action={onSubmit} className={styles.form}>
+      <label htmlFor="artist">Enter artist you want to search for </label>
       <input
         type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        name="artist"
+        required
+        defaultValue="2YZyLoL8N0Wb9xBt1NhZWg"
       />
       <Button icon={<SpotifyLogo />} variant="secondary" type="submit">
         Search for artists

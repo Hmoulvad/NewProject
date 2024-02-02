@@ -1,4 +1,3 @@
-import { hours } from "@/utils/time";
 import * as SpotifyAPI from "../index";
 
 const body = `grant_type=client_credentials&client_id=${process.env.SPOTIFY_CLIENT_ID}&client_secret=${process.env.SPOTIFY_CLIENT_SECRET}`;
@@ -10,7 +9,7 @@ export default async function getAuthToken() {
     },
     body,
     next: {
-      revalidate: hours(1),
+      revalidate: 3600,
     },
   }).json<SpotifyAPI.Types.AuthTokenResponse>();
 }
