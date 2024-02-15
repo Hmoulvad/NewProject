@@ -1,7 +1,3 @@
-.inverted {
-  color: var(--secondary-color);
-}
-
 .display1 {
   font-size: var(--font-size-8);
   font-weight: var(--font-weight-7);
@@ -71,5 +67,15 @@
 .caption {
   font-weight: var(--font-weight-4);
   font-size: var(--font-size-0);
+  line-height: var(--font-lineheight-1);
+}
+
+.label {
+  font-weight: var(--font-weight-4);
+  font-size: var(--font-size-1);
   line-height: var(--font-lineheight-0);
+}
+
+.inverted {
+  color: var(--secondary-color);
 }

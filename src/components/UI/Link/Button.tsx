@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
 import styles from "./styles.module.css";
+import Typography from "../Typography";
 
 type Props = PropsWithChildren &
   LinkProps &
@@ -16,7 +17,7 @@ export default function LinkAsButton({ children, className, ...rest }: Props) {
       className={clsx(styles.link, className)}
       {...rest}
     >
-      {children}
+      <Typography as="span">{children}</Typography>
     </button>
   );
 }

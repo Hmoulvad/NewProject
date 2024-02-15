@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { useSelect } from "downshift";
 import Typography from "../Typography";
 import styles from "./styles.module.css";
+import { ArrowDown } from "@phosphor-icons/react/dist/ssr/ArrowDown";
 
 type Props = {
   defaultOption?: string;
@@ -53,19 +54,14 @@ export default function Select({
         {...getToggleButtonProps()}
       >
         <span className={styles.buttonText}>
-          <Typography
-            as="label"
-            variant="body"
-            color="neutral"
-            {...getLabelProps()}
-          >
+          <Typography as="label" variant="caption" {...getLabelProps()}>
             {label}
           </Typography>
-          <Typography as="span" variant="caption">
+          <Typography as="span" variant="label">
             {selectedItem}
           </Typography>
         </span>
-        <TagChevron />
+        <ArrowDown />
       </button>
       <ul
         className={clsx(styles.list, {
@@ -82,9 +78,7 @@ export default function Select({
               })}
               {...getItemProps({ item: option, index })}
             >
-              <Typography as="span" variant="caption">
-                {option}
-              </Typography>
+              <Typography as="span">{option}</Typography>
             </li>
           ))}
       </ul>

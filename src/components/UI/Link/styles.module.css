@@ -1,16 +1,21 @@
 .link {
   display: block;
   text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+  text-underline-offset: var(--size-1);
   background-color: transparent;
   border: none;
-  cursor: pointer;
-  color: var(--primary-color);
-  font-size: var(--size-3);
-  font-weight: 400;
-  line-height: var(--font-lineheight-3);
-  letter-spacing: var(--font-letterspacing-3);
+  transition: text-decoration-color var(--timing-short);
+
+  span {
+    color: var(--primary-color);
+    transition: color var(--timing-short);
+  }
 
   &:hover {
-    color: var(--link-color);
+    text-decoration-color: var(--tertiary-color);
+    span {
+      color: var(--tertiary-color);
+    }
   }
 }

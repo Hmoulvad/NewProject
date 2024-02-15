@@ -14,7 +14,8 @@ type Variants =
   | "display5"
   | "display6"
   | "body"
-  | "caption";
+  | "caption"
+  | "label";
 
 type Props<T extends ElementType> = {
   as?: T;
@@ -50,6 +51,8 @@ function getTypographyStyle<T extends ElementType>(
       return styles.body;
     case "caption":
       return styles.caption;
+    case "label":
+      return styles.label;
     default:
       return styles.body;
   }
