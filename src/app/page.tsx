@@ -1,4 +1,4 @@
-import Page from "@/components/UI/Page";
+import Page from "@/components/UI/PageContainer/PageContainer";
 
 export default function HomePage() {
   return (

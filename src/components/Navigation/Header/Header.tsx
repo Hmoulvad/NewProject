@@ -1,5 +1,4 @@
-import IconButton from "@/components/UI/IconButton";
-import Link from "@/components/UI/Link";
+import { IconButton, Link } from "@/components/UI";
 import { CodepenLogo } from "@phosphor-icons/react/dist/ssr/CodepenLogo";
 import NextLink from "next/link";
 import styles from "./styles.module.css";

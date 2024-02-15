@@ -1,15 +1,12 @@
 import clsx from "clsx";
-import NextLink, { LinkProps } from "next/link";
 import Typography from "../Typography";
 import { getButtonSizeStyle, getButtonVariantStyle } from "./getButtonStyles";
 import styles from "./styles.module.css";
 import { ButtonProps } from "./types";
 
-type Props = ButtonProps &
-  LinkProps &
-  React.AnchorHTMLAttributes<HTMLAnchorElement>;
+type Props = ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export default function ButtonAsLink({
+export default function Button({
   children,
   className,
   icon,
@@ -17,11 +14,11 @@ export default function ButtonAsLink({
   variant = "primary",
   ...rest
 }: Props) {
-  const fallbackTitle =
+  const fallbackAriaLabel =
     typeof children === "string" ? (children as string) : "";
   return (
-    <NextLink
-      title={fallbackTitle}
+    <button
+      aria-label={fallbackAriaLabel}
       className={clsx(
         styles.button,
         getButtonVariantStyle(variant),
@@ -35,6 +32,6 @@ export default function ButtonAsLink({
     >
       <Typography as="span">{children}</Typography>
       {icon && icon}
-    </NextLink>
+    </button>
   );
 }

@@ -1,32 +1,36 @@
 "use client";
 
-import React, { forwardRef, useEffect, useImperativeHandle } from "react";
+import React, {
+  PropsWithChildren,
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+} from "react";
 import styles from "./styles.module.css";
-import { VariantProps, cva } from "class-variance-authority";
+import clsx from "clsx";
 
-const ModalStyles = cva(styles.modal, {
-  variants: {
-    variant: {
-      center: styles.center,
-      sidebar: styles.sidebar,
-    },
-  },
-  defaultVariants: {
-    variant: "center",
-  },
-});
+type Variant = "center" | "sidebar";
 
 type Props = {
-  children: React.ReactNode;
-} & VariantProps<typeof ModalStyles>;
+  variant: Variant;
+} & PropsWithChildren;
 
 export type ModalOperations = {
   open: () => void;
   close: () => void;
 };
 
+function getModalStyle(variant: Variant) {
+  switch (variant) {
+    case "center":
+      return styles.center;
+    case "sidebar":
+      return styles.sidebar;
+  }
+}
+
 const Modal = forwardRef<ModalOperations, Props>(function ModalRef(
-  { children, variant },
+  { children, variant = "center" },
   ref
 ) {
   const dialogRef = React.useRef<HTMLDialogElement>(null);
@@ -64,7 +68,10 @@ const Modal = forwardRef<ModalOperations, Props>(function ModalRef(
   }, []);
 
   return (
-    <dialog ref={dialogRef} className={ModalStyles({ variant })}>
+    <dialog
+      ref={dialogRef}
+      className={clsx(styles.modal, getModalStyle(variant))}
+    >
       {children}
     </dialog>
   );

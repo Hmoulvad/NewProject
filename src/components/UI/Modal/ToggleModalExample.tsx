@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Modal, { ModalOperations } from "./index";
-import Button from "../Button";
+import Modal, { ModalOperations } from "./Modal";
+import Button from "../Button/Button";
 import Typography from "../Typography";
 
 export default function ToggleModalExample() {

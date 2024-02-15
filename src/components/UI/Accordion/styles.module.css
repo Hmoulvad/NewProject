@@ -1,5 +1,5 @@
 .details {
-  width: 100%;
+  width: fit-content;
   border: 1px solid var(--primary-color);
   min-height: 4rem;
   padding: 1rem;

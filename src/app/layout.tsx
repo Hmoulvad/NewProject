@@ -1,8 +1,8 @@
+import { Footer } from "@/components/Navigation/Footer";
+import { Header } from "@/components/Navigation/Header";
+import GlobalScripts from "@/components/Scripts";
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import Header from "@/components/Navigation/Header";
-import Footer from "@/components/Navigation/Footer";
-import GlobalScripts from "@/components/Scripts";
 
 export const metadata: Metadata = {
   title: "Create Next App",

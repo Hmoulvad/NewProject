@@ -1,16 +1,18 @@
-import Accordion from "@/components/UI/Accordion";
-import Button from "@/components/UI/Button";
-import IconButton from "@/components/UI/IconButton";
-import Link from "@/components/UI/Link";
+import {
+  Accordion,
+  Button,
+  IconButton,
+  Link,
+  PageContainer,
+} from "@/components/UI";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
-import Page from "@/components/UI/Page";
 import Typography from "@/components/UI/Typography";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { Basket } from "@phosphor-icons/react/dist/ssr/Basket";
 
 export default function UIPage() {
   return (
-    <Page>
+    <PageContainer>
       <section>
         <Typography as="h1" variant="display1">
           This is a display 1...
@@ -84,6 +86,6 @@ export default function UIPage() {
       <section>
         <ToggleModalExample />
       </section>
-    </Page>
+    </PageContainer>
   );
 }

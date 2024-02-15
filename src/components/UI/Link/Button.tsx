@@ -1,14 +1,21 @@
+import clsx from "clsx";
+import { LinkProps } from "next/link";
+import { PropsWithChildren } from "react";
 import styles from "./styles.module.css";
 
-type Props = {
-  children: React.ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+type Props = PropsWithChildren &
+  LinkProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export default function LinkAsButton({ children, ...rest }: Props) {
-  const fallbackAiraLabel =
+export default function LinkAsButton({ children, className, ...rest }: Props) {
+  const fallbackTitle =
     typeof children === "string" ? (children as string) : "";
   return (
-    <button aria-label={fallbackAiraLabel} className={styles.link} {...rest}>
+    <button
+      title={fallbackTitle}
+      className={clsx(styles.link, className)}
+      {...rest}
+    >
       {children}
     </button>
   );
