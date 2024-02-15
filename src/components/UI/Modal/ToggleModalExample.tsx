@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
-import Modal, { ModalOperations } from "./Modal";
+import { useRef } from "react";
 import Button from "../Button/Button";
 import Typography from "../Typography";
+import Modal, { ModalOperations } from "./Modal";
 
 export default function ToggleModalExample() {
-  const sidebarModalRef = React.useRef<ModalOperations>(null);
-  const centerModalRef = React.useRef<ModalOperations>(null);
+  const sidebarModalRef = useRef<ModalOperations>(null);
+  const centerModalRef = useRef<ModalOperations>(null);
 
   return (
     <>

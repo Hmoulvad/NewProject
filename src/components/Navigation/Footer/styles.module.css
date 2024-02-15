@@ -1,5 +1,5 @@
 .container {
-  height: 4rem;
+  height: var(--size-9);
   display: flex;
-  padding: 1rem;
+  padding: var(--size-3);
 }

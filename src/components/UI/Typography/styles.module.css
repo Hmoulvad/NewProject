@@ -3,70 +3,73 @@
 }
 
 .display1 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-7);
+  line-height: var(--font-lineheight-1);
 
   @media (--mobile) {
-    font-size: 3.5rem;
+    font-size: var(--font-size-7);
   }
 }
 
 .display2 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-7);
+  line-height: var(--font-lineheight-1);
 
   @media (--mobile) {
-    font-size: 3rem;
+    font-size: var(--font-size-6);
   }
 }
 
 .display3 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-7);
+  line-height: var(--font-lineheight-1);
 
   @media (--mobile) {
-    font-size: 2.5rem;
+    font-size: var(--font-size-5);
   }
 }
 
 .display4 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-7);
+  line-height: var(--font-lineheight-1);
 
   @media (--mobile) {
-    font-size: 2rem;
+    font-size: var(--font-size-4);
   }
 }
 
 .display5 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-7);
+  line-height: var(--font-lineheight-1);
 
   @media (--mobile) {
-    font-size: 1.5rem;
+    font-size: var(--font-size-3);
   }
 }
 
 .display6 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-7);
+  line-height: var(--font-lineheight-1);
 
   @media (--mobile) {
-    font-size: 1rem;
+    font-size: var(--font-size-2);
   }
 }
 
 .body {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-weight: var(--font-weight-4);
+  font-size: var(--font-size-1);
+  line-height: var(--font-lineheight-3);
 }
 
 .caption {
-  font-size: 0.75rem;
+  font-weight: var(--font-weight-4);
+  font-size: var(--font-size-0);
+  line-height: var(--font-lineheight-0);
 }

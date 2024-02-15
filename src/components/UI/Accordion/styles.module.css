@@ -1,12 +1,12 @@
 .details {
   width: fit-content;
-  border: 1px solid var(--primary-color);
-  min-height: 4rem;
-  padding: 1rem;
+  border: var(--border-size-1) solid var(--primary-color);
+  min-height: var(--size-9);
+  padding: var(--size-3);
 
   summary {
-    margin: -1rem;
-    padding: 1rem;
+    margin: calc(var(--size-3) * -1);
+    padding: var(--size-3);
     display: block;
     cursor: pointer;
     transition: margin var(--timing-long) ease;

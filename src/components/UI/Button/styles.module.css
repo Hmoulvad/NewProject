@@ -1,59 +1,58 @@
 .button {
   cursor: pointer;
-  padding-inline: 1rem;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
+  padding-inline: var(--size-3);
+  background-color: var(--background-color);
+  color: var(--color);
+  height: var(--height);
   justify-content: center;
+  width: var(--width);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   width: fit-content;
+  white-space: nowrap;
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  gap: var(--size-2);
+
+  svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
 }
 
 .withIcon {
-  gap: 0.5rem;
   justify-content: space-between;
 }
 
 .primary {
-  color: var(--primary-color);
+  --color: var(--secondary-color);
+  --background-color: var(--primary-color);
 }
 
 .secondary {
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  --color: var(--primary-color);
+  border: var(--border-size-1) solid var(--primary-color);
 }
 
 .small {
-  min-height: 2rem;
-
-  svg {
-    display: flex;
-    flex: 0 0 auto;
-    width: 1rem;
-    height: 1rem;
-  }
+  --height: var(--size-7);
+  --icon-size: var(--size-4);
 }
 
 .medium {
-  min-height: 3rem;
-
-  svg {
-    display: flex;
-    flex: 0 0 auto;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+  --height: var(--size-8);
+  --icon-size: var(--size-5);
 }
 
 .large {
-  min-height: 4rem;
+  --height: var(--size-9);
+  --icon-size: var(--size-6);
+}
 
-  svg {
-    display: flex;
-    flex: 0 0 auto;
-    width: 2rem;
-    height: 2rem;
-  }
+.onlyIcon {
+  width: var(--height);
+  padding-inline: 0;
+  justify-content: center;
 }

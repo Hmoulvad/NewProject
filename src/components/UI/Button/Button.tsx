@@ -26,11 +26,12 @@ export default function Button({
         className,
         {
           [styles.withIcon]: Boolean(icon),
+          [styles.onlyIcon]: !children && icon,
         }
       )}
       {...rest}
     >
-      <Typography as="span">{children}</Typography>
+      {children ? <Typography as="span">{children}</Typography> : null}
       {icon && icon}
     </button>
   );

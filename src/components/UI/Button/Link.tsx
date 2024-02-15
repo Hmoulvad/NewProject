@@ -29,6 +29,7 @@ export default function ButtonAsLink({
         className,
         {
           [styles.withIcon]: Boolean(icon),
+          [styles.onlyIcon]: !children && icon,
         }
       )}
       {...rest}

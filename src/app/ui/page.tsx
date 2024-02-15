@@ -1,10 +1,4 @@
-import {
-  Accordion,
-  Button,
-  IconButton,
-  Link,
-  PageContainer,
-} from "@/components/UI";
+import { Accordion, Button, Link, PageContainer } from "@/components/UI";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
 import Typography from "@/components/UI/Typography";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
@@ -41,7 +35,7 @@ export default function UIPage() {
           This is a secondary small button
         </Button>
         <Button size="small" icon={<ArrowRight />}>
-          This is a primary medium with icon button
+          This is a secondary small button with icon
         </Button>
         <Button size="small" icon={<ArrowRight />} variant="secondary">
           This is a secondary medium button with icon
@@ -66,12 +60,12 @@ export default function UIPage() {
         </Button>
       </section>
       <section>
-        <IconButton size="small" icon={<Basket />} />
-        <IconButton size="small" variant="secondary" icon={<Basket />} />
-        <IconButton icon={<Basket />} />
-        <IconButton variant="secondary" icon={<Basket />} />
-        <IconButton size="large" icon={<Basket />} />
-        <IconButton size="large" variant="secondary" icon={<Basket />} />
+        <Button size="small" icon={<Basket />} />
+        <Button size="small" variant="secondary" icon={<Basket />} />
+        <Button icon={<Basket />} />
+        <Button variant="secondary" icon={<Basket />} />
+        <Button size="large" icon={<Basket />} />
+        <Button size="large" variant="secondary" icon={<Basket />} />
       </section>
       <section>
         <Accordion title="This is a modal">

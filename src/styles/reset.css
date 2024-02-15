@@ -25,7 +25,7 @@ body {
 
 /* add padding to main */
 main {
-  padding: 1rem;
+  padding: var(--size-3);
 }
 
 /* responsive images/videos */
@@ -56,6 +56,6 @@ p {
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-padding-top: var(--size-7);
   }
 }
