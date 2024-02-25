@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import NextLink, { LinkProps } from "next/link";
-import Typography from "../Typography";
 import { getButtonSizeStyle, getButtonVariantStyle } from "./getButtonStyles";
 import styles from "./styles.module.css";
 import { ButtonProps } from "./types";
+import { Typography } from "../Typography";
 
 type Props = ButtonProps &
   LinkProps &
