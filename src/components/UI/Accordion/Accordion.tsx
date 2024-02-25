@@ -1,4 +1,4 @@
-import Typography from "../Typography";
+import { Typography } from "../Typography";
 import styles from "./styles.module.css";
 
 type Props = {

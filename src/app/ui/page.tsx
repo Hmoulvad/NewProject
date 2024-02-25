@@ -1,7 +1,12 @@
-import { Accordion, Button, Link, PageContainer } from "@/components/UI";
+import {
+  Accordion,
+  Button,
+  Link,
+  PageContainer,
+  Select,
+  Typography,
+} from "@/components/UI";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
-import Select from "@/components/UI/Select/Select";
-import Typography from "@/components/UI/Typography";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { Basket } from "@phosphor-icons/react/dist/ssr/Basket";
 

@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import Button from "../Button/Button";
-import Typography from "../Typography";
+import { Typography } from "..";
+import { Button } from "../Button";
 import Modal, { ModalOperations } from "./Modal";
 
 export default function ToggleModalExample() {

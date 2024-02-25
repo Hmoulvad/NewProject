@@ -1,9 +1,9 @@
-import Page from "@/components/UI/PageContainer/PageContainer";
+import { PageContainer } from "@/components/UI";
 
 export default function HomePage() {
   return (
-    <Page>
+    <PageContainer>
       <></>
-    </Page>
+    </PageContainer>
   );
 }

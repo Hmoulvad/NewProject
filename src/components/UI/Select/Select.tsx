@@ -1,11 +1,10 @@
 "use client";
 
-import { TagChevron } from "@phosphor-icons/react/dist/ssr/TagChevron";
+import { ArrowDown } from "@phosphor-icons/react/dist/ssr/ArrowDown";
 import clsx from "clsx";
 import { useSelect } from "downshift";
-import Typography from "../Typography";
+import { Typography } from "../Typography";
 import styles from "./styles.module.css";
-import { ArrowDown } from "@phosphor-icons/react/dist/ssr/ArrowDown";
 
 type Props = {
   defaultOption?: string;

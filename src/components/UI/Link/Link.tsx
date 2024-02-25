@@ -1,7 +1,7 @@
 import NextLink from "next/link";
+import { Typography } from "../Typography";
 import styles from "./styles.module.css";
 import { SharedLinkProps } from "./types";
-import Typography from "../Typography";
 
 type Props = SharedLinkProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 

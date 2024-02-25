@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
 import styles from "./styles.module.css";
-import Typography from "../Typography";
+import { Typography } from "../Typography";
 
 type Props = PropsWithChildren &
   LinkProps &
