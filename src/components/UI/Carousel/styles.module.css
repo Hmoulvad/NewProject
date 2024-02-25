@@ -1,0 +1,17 @@
+.carousel {
+  display: grid;
+  gap: var(--size-3);
+
+  ul {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    gap: var(--size-3);
+    list-style: none;
+    scroll-snap-type: x mandatory;
+
+    li {
+      scroll-snap-align: start;
+    }
+  }
+}
