@@ -6,13 +6,20 @@ type Props = {
   label: string;
   value: string;
   name: string;
+  defaultChecked?: boolean;
 };
 
-export default function Radio({ label, name, value }: Props) {
+export default function Radio({ label, name, value, defaultChecked }: Props) {
   return (
     <label className={styles.label}>
       <Typography htmlFor={name}>{label}</Typography>
-      <Typography value={value} type="radio" name={name} as="input" />
+      <Typography
+        defaultChecked={defaultChecked}
+        value={value}
+        type="radio"
+        name={name}
+        as="input"
+      />
       <span className={styles.radio}>
         <DotOutline weight="fill" />
       </span>

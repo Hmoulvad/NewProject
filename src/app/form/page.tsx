@@ -25,7 +25,7 @@ export default function FormPage() {
             { value: "html", label: "HTML" },
             { value: "css", label: "CSS" },
             { value: "js", label: "JavaScript" },
-            { value: "ts", label: "TypeScript" },
+            { value: "ts", label: "TypeScript", defaultChecked: true },
           ]}
         />
         <Button type="submit">Submit</Button>
