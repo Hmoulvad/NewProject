@@ -11,6 +11,9 @@ export default function Header() {
       </NextLink>
       <ul>
         <li>
+          <Link href="/form">Form</Link>
+        </li>
+        <li>
           <Link href="/ui">UI</Link>
         </li>
       </ul>

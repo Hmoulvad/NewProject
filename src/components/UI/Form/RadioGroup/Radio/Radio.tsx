@@ -8,11 +8,11 @@ type Props = {
   name: string;
 };
 
-export default function Radio({ label, name }: Props) {
+export default function Radio({ label, name, value }: Props) {
   return (
     <label className={styles.label}>
       <Typography htmlFor={name}>{label}</Typography>
-      <Typography type="radio" name={name} as="input" />
+      <Typography value={value} type="radio" name={name} as="input" />
       <span className={styles.radio}>
         <DotOutline weight="fill" />
       </span>
