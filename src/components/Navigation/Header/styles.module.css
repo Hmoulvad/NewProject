@@ -1,13 +1,27 @@
 .header {
-  height: var(--size-9);
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--size-7);
+  grid-template-columns: auto 1fr var(--size-14) auto;
+  grid-template-areas: "logo _ search nav";
+  background-color: black;
 
   ul {
+    grid-area: nav;
     display: flex;
     gap: var(--size-3);
     list-style: none;
     padding-right: var(--size-3);
+    align-items: center;
   }
+  @media (--mobile) {
+    gap: var(--size-3);
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo _ nav" "search search search";
+  }
+}
+
+.logo {
+  grid-area: logo;
 }

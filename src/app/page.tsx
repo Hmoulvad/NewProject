@@ -10,6 +10,12 @@ export default function HomePage() {
           <ProductCard key={index} />
         ))}
       />
+      <Carousel
+        title="Product Carousel"
+        items={Array.from({ length: 10 }).map((_, index) => (
+          <ProductCard key={index} />
+        ))}
+      />
     </PageContainer>
   );
 }

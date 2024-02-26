@@ -15,9 +15,7 @@
   --font-height: var(--font-size-8);
   --height: calc(var(--font-height) * var(--font-lineheight-1));
 
-  @media (--mobile) {
-    --font-height: var(--font-size-7);
-  }
+  display: flex;
 }
 
 .display2 {
