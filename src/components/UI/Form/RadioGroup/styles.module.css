@@ -1,0 +1,6 @@
+.radioGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+}

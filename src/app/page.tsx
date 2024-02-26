@@ -1,6 +1,7 @@
 import { ProductCard } from "@/components/Features/Product";
 import { Carousel, PageContainer } from "@/components/UI";
 import { Checkbox, Input, Select } from "@/components/UI/Form";
+import { RadioGroup } from "@/components/UI/Form/RadioGroup";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,16 @@ export default function HomePage() {
           name="Car choice"
           label="Select a car"
           options={["Volvo", "Saab", "Mercedes", "Audi"]}
+        />
+        <RadioGroup
+          name="Favorite Weblanguage"
+          label="Please select your favorite Web language"
+          options={[
+            { value: "html", label: "HTML" },
+            { value: "css", label: "CSS" },
+            { value: "js", label: "JavaScript" },
+            { value: "ts", label: "TypeScript" },
+          ]}
         />
       </form>
     </PageContainer>
