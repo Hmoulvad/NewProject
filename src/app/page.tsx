@@ -1,11 +1,7 @@
-import { ProductCard } from "@/features/Product";
 import { Carousel, PageContainer } from "@/components/UI";
-import { authOptions } from "@/services/Auth/options";
-import { getServerSession } from "next-auth";
+import { ProductCard } from "@/features/Product";
 
 export default async function HomePage() {
-  const session = await getServerSession(authOptions);
-
   return (
     <PageContainer>
       <Carousel
