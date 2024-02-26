@@ -4,7 +4,6 @@
   gap: var(--size-7);
   grid-template-columns: auto 1fr var(--size-14) auto;
   grid-template-areas: "logo _ search nav";
-  background-color: black;
 
   ul {
     grid-area: nav;
