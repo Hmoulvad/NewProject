@@ -1,6 +1,6 @@
-import { ArrowLeft, Image, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { Skeleton } from "@/components/UI";
+import { Image } from "@phosphor-icons/react/dist/ssr";
 import styles from "./styles.module.css";
-import { Button, Skeleton } from "@/components/UI";
 
 export default function ProductCard() {
   return (

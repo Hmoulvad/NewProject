@@ -5,20 +5,20 @@
   display: grid;
   grid-template-rows: var(--size-12) auto;
 
-  header {
+  & > header {
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    svg {
+    & > svg {
       fill: black;
       --size: var(--size-9);
       width: var(--size);
       height: var(--size);
     }
   }
-  section {
+  & > section {
     padding: var(--size-3);
     display: flex;
     flex-direction: column;

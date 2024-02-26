@@ -2,14 +2,14 @@
   display: grid;
   gap: var(--size-3);
 
-  header {
+  & > header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: var(--size-3);
   }
 
-  ul {
+  & > ul {
     width: 100%;
     overflow-x: auto;
     display: flex;
@@ -21,7 +21,7 @@
       display: none;
     }
 
-    li {
+    & > li {
       scroll-snap-align: start;
     }
   }
