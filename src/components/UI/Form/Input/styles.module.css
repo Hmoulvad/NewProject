@@ -1,0 +1,13 @@
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+
+  & > input {
+    height: var(--size-8);
+    padding: var(--size-3);
+    border: var(--border-size-1) solid white;
+    background-color: transparent;
+  }
+}

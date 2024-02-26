@@ -1,5 +1,6 @@
 import { ProductCard } from "@/components/Features/Product";
 import { Carousel, PageContainer } from "@/components/UI";
+import { Checkbox, Input } from "@/components/UI/Form";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,14 @@ export default function HomePage() {
           <ProductCard key={index} />
         ))}
       />
+      <form>
+        <Input
+          placeholder="Search for product..."
+          label="Product Search"
+          name="search"
+        />
+        <Checkbox label="Show only available products" name="available" />
+      </form>
     </PageContainer>
   );
 }
