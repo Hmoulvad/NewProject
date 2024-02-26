@@ -9,7 +9,7 @@ export default function ProductCard() {
         <Image weight="thin" />
       </header>
       <section>
-        <Skeleton mimic="display5" width={180} />
+        <Skeleton mimic="display4" width={180} />
         <Skeleton mimic="body" width={250} />
         <Skeleton mimic="body" width={200} />
         <Skeleton mimic="body" width={150} />
