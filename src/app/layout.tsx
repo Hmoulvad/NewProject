@@ -1,6 +1,6 @@
-import { Footer } from "@/components/Navigation/Footer";
-import { Header } from "@/components/Navigation/Header";
-import GlobalScripts from "@/components/Scripts";
+import { Footer } from "@/test/Footer";
+import { Header } from "@/test/Header";
+import GlobalScripts from "@/test/Scripts";
 import type { Metadata } from "next";
 import "../styles/globals.css";
 
