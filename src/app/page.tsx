@@ -1,6 +1,5 @@
 import { ProductCard } from "@/components/Features/Product";
-import { PageContainer } from "@/components/UI";
-import { Carousel } from "@/components/UI/Carousel";
+import { Carousel, PageContainer } from "@/components/UI";
 
 export default function HomePage() {
   return (

@@ -2,6 +2,13 @@
   display: grid;
   gap: var(--size-3);
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--size-3);
+  }
+
   ul {
     width: 100%;
     overflow-x: auto;
@@ -10,8 +17,17 @@
     list-style: none;
     scroll-snap-type: x mandatory;
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     li {
       scroll-snap-align: start;
     }
   }
+}
+
+.navigate {
+  gap: var(--size-3);
+  display: flex;
 }

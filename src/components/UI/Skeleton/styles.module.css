@@ -1,0 +1,98 @@
+.base {
+  width: var(--width);
+  height: var(--height);
+  background: linear-gradient(
+    110deg,
+    var(--gray-4) 8%,
+    var(--gray-1) 18%,
+    var(--gray-4) 33%
+  );
+  background-size: 200% 100%;
+  animation: 1s shine linear infinite;
+}
+
+.display1 {
+  --font-height: var(--font-size-8);
+  --line-height: var(--font-lineheight-1);
+  --height: calc(var(--font-size-8) * var(--font-lineheight-1));
+
+  @media (--mobile) {
+    --font-height: var(--font-size-7);
+  }
+}
+
+.display2 {
+  --font-height: var(--font-size-7);
+  --line-height: var(--font-lineheight-1);
+  --height: calc(var(--font-size-7) * var(--font-lineheight-1));
+
+  @media (--mobile) {
+    --font-height: var(--font-size-6);
+  }
+}
+
+.display3 {
+  --font-height: var(--font-size-6);
+  --line-height: var(--font-lineheight-1);
+  --height: calc(var(--font-size-6) * var(--font-lineheight-1));
+
+  @media (--mobile) {
+    --font-height: var(--font-size-5);
+  }
+}
+
+.display4 {
+  --font-height: var(--font-size-5);
+  --line-height: var(--font-lineheight-1);
+  --height: calc(var(--font-size-5) * var(--font-lineheight-1));
+
+  @media (--mobile) {
+    --font-height: var(--font-size-4);
+  }
+}
+
+.display5 {
+  --font-height: var(--font-size-4);
+  --line-height: var(--font-lineheight-1);
+  --height: calc(var(--font-size-4) * var(--font-lineheight-1));
+
+  @media (--mobile) {
+    --font-height: var(--font-size-3);
+  }
+}
+
+.display6 {
+  --font-height: var(--font-size-3);
+  --line-height: var(--font-lineheight-1);
+  --height: calc(var(--font-size-3) * var(--font-lineheight-1));
+
+  @media (--mobile) {
+    --font-height: var(--font-size-2);
+  }
+}
+
+.body {
+  --height: calc(var(--font-size-1) * var(--font-lineheight-3));
+}
+
+.caption {
+  --height: calc(var(--font-size-0) * var(--font-lineheight-1));
+}
+
+.label {
+  --height: calc(var(--font-size-1) * var(--font-lineheight-0));
+}
+
+.fillWidth {
+  --dith: 100%;
+}
+
+.fillHeight {
+  --height: 100%;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
