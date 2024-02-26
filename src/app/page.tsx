@@ -1,4 +1,4 @@
-import { ProductCard } from "@/test/Product";
+import { ProductCard } from "@/features/Product";
 import { Carousel, PageContainer } from "@/components/UI";
 import { authOptions } from "@/services/Auth/options";
 import { getServerSession } from "next-auth";
