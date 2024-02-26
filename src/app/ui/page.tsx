@@ -3,7 +3,7 @@ import {
   Button,
   Link,
   PageContainer,
-  Select,
+  Dropdown,
   Typography,
 } from "@/components/UI";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
@@ -14,7 +14,7 @@ export default function UIPage() {
   return (
     <PageContainer>
       <section>
-        <Select label="Label" options={["Item1", "Item2", "Item3"]} />
+        <Dropdown label="Label" options={["Item1", "Item2", "Item3"]} />
       </section>
       <section>
         <Typography as="h1" variant="display1">

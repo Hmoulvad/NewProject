@@ -4,10 +4,19 @@
   flex-direction: column;
   gap: var(--size-2);
 
-  & > input {
+  & > select {
     height: var(--size-8);
+    appearance: none;
     padding-inline: var(--size-3);
     border: var(--border-size-1) solid white;
     background-color: transparent;
+  }
+
+  & > svg {
+    width: var(--size-4);
+    height: var(--size-4);
+    position: absolute;
+    bottom: var(--size-3);
+    right: var(--size-2);
   }
 }

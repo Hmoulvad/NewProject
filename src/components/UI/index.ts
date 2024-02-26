@@ -4,6 +4,6 @@ export * from "./Carousel";
 export * from "./Link";
 export * from "./Modal";
 export * from "./PageContainer";
-export * from "./Select";
+export * from "./Dropdown";
 export * from "./Skeleton";
 export * from "./Typography";

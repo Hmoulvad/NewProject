@@ -1,6 +1,6 @@
 import { ProductCard } from "@/components/Features/Product";
 import { Carousel, PageContainer } from "@/components/UI";
-import { Checkbox, Input } from "@/components/UI/Form";
+import { Checkbox, Input, Select } from "@/components/UI/Form";
 
 export default function HomePage() {
   return (
@@ -18,6 +18,11 @@ export default function HomePage() {
           name="search"
         />
         <Checkbox label="Show only available products" name="available" />
+        <Select
+          name="Car choice"
+          label="Select a car"
+          options={["Volvo", "Saab", "Mercedes", "Audi"]}
+        />
       </form>
     </PageContainer>
   );
