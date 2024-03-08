@@ -1,0 +1,14 @@
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+
+  & > textarea {
+    height: var(--size-11);
+    padding: var(--size-3);
+    border: var(--border-size-1) solid white;
+    background-color: transparent;
+    resize: none;
+  }
+}

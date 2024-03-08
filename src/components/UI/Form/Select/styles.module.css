@@ -10,6 +10,7 @@
     padding-inline: var(--size-3);
     border: var(--border-size-1) solid white;
     background-color: transparent;
+    cursor: pointer;
   }
 
   & > svg {
@@ -18,5 +19,6 @@
     position: absolute;
     bottom: var(--size-3);
     right: var(--size-2);
+    cursor: pointer;
   }
 }
