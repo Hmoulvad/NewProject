@@ -1,14 +1,19 @@
 import {
   Accordion,
   Button,
+  Dropdown,
   Link,
   PageContainer,
-  Dropdown,
   Typography,
 } from "@/components/UI";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { Basket } from "@phosphor-icons/react/dist/ssr/Basket";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "UI",
+};
 
 export default function UIPage() {
   return (

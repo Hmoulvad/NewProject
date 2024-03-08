@@ -8,6 +8,11 @@ import {
 } from "@/components/UI/Form";
 import { RadioGroup } from "@/components/UI/Form/RadioGroup";
 import styles from "./styles.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Form",
+};
 
 export default function FormPage() {
   return (
