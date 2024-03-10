@@ -15,12 +15,14 @@ type PageProps = {
 };
 
 export default async function SpotifyPage({ searchParams }: PageProps) {
-  console.log(searchParams);
   const { access_token } = await Spotify.Actions.getToken();
   const results = await Spotify.Actions.search({
     query: searchParams.search,
     token: access_token,
-    type: searchParams.type,
+    type:
+      typeof searchParams.type === "string"
+        ? [searchParams.type]
+        : searchParams.type,
   });
 
   return (
