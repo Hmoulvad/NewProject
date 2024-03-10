@@ -1,5 +1,5 @@
 import { Button } from "@/components/UI";
-import { Input, Select } from "@/components/UI/Form";
+import { CheckboxGroup, Input } from "@/components/UI/Form";
 import styles from "./styles.module.css";
 
 export default function Form() {
@@ -11,10 +11,14 @@ export default function Form() {
         name="search"
         placeholder="Spotify Search"
       />
-      <Select
-        label="Search type"
+      <CheckboxGroup
         name="type"
-        options={["Artist", "Album", "Track"]}
+        label="Please select the type of search you would like to perform."
+        options={[
+          { value: "artist", label: "Artist", defaultChecked: true },
+          { value: "album", label: "Album" },
+          { value: "track", label: "Track" },
+        ]}
       />
       <Button type="submit">Search</Button>
     </form>

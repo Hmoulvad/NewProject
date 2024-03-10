@@ -1,10 +1,10 @@
 import { spotifyApi } from "../api";
-import { SearchRequest, SearchResponse } from "../types";
+import { SearchRequest, SearchResponse, SearchType } from "../types";
 
 type Args = {
   token: string;
   query: string;
-  type?: ["album", "artist", "playlist", "track", "show", "episode"];
+  type?: SearchType[];
 };
 
 export function search({

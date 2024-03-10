@@ -13,6 +13,14 @@ export type SearchRequest = {
   include_external?: "audio";
 };
 
+export type SearchType =
+  | "album"
+  | "artist"
+  | "playlist"
+  | "track"
+  | "show"
+  | "episode";
+
 export type Artist = {
   external_urls: {
     spotify: string;
