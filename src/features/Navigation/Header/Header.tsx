@@ -1,7 +1,6 @@
 import { Button, Link } from "@/components/UI";
 import { CodepenLogo } from "@phosphor-icons/react/dist/ssr/CodepenLogo";
 import NextLink from "next/link";
-import { Search } from "./Search";
 import styles from "./styles.module.css";
 
 export default function Header() {
@@ -10,8 +9,11 @@ export default function Header() {
       <NextLink href="/" title="Logo">
         <Button className={styles.logo} size="large" icon={<CodepenLogo />} />
       </NextLink>
-      <Search />
+      {/* <Search /> */}
       <ul>
+        <li>
+          <Link href="/spotify">Spotify</Link>
+        </li>
         <li>
           <Link href="/form">Form</Link>
         </li>
