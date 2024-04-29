@@ -1,9 +1,8 @@
 .header {
-  display: grid;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--size-7);
-  grid-template-columns: auto 1fr var(--size-14) auto;
-  grid-template-areas: "logo _ search nav";
 
   ul {
     grid-area: nav;

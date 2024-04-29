@@ -82,7 +82,7 @@ export default function UIPage() {
         <Button size="large" variant="secondary" icon={<Basket />} />
       </section>
       <section>
-        <Accordion title="This is a modal">
+        <Accordion title="This is an Accordion">
           <Typography>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
             repellat blanditiis neque iure quisquam velit enim necessitatibus
