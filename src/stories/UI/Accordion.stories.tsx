@@ -12,6 +12,6 @@ const meta: Meta<typeof Accordion> = {
 export default meta;
 
 export const First: StoryObj<typeof Accordion> = {
-  name: "Component",
+  name: "Accordion",
   render: (args) => <Accordion {...args} />,
 };

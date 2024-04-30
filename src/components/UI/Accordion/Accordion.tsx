@@ -1,16 +1,22 @@
+import { PropsWithChildren } from "react";
 import { Typography } from "../Typography";
 import styles from "./styles.module.css";
+import clsx from "clsx";
 
 type Props = {
   title: string;
-  children: React.ReactNode;
-};
+  fill?: boolean;
+} & PropsWithChildren;
 
-export default function Accordion({ title, children }: Props) {
+export default function Accordion({ title, children, fill = false }: Props) {
   return (
-    <details className={styles.details}>
+    <details
+      className={clsx(styles.details, {
+        [styles.fill]: fill,
+      })}
+    >
       <summary>
-        <Typography variant="display5">{title}</Typography>
+        <Typography variant="body">{<strong>{title}</strong>}</Typography>
       </summary>
       {children}
     </details>
