@@ -9,16 +9,9 @@ export default function Header() {
       <NextLink href="/" title="Logo">
         <Button className={styles.logo} size="large" icon={<CodepenLogo />} />
       </NextLink>
-      {/* <Search /> */}
       <ul>
         <li>
           <Link href="/spotify">Spotify</Link>
-        </li>
-        <li>
-          <Link href="/form">Form</Link>
-        </li>
-        <li>
-          <Link href="/ui">UI</Link>
         </li>
       </ul>
     </header>
