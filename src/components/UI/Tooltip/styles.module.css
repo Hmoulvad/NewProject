@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  width: fit-content;
+  height: var(--size-7);
+  top: calc(var(--size-7) * -1);
+  padding-inline: var(--size-2);
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-1);
+  background-color: white;
+  cursor: text;
+  gap: var(--size-2);
+}

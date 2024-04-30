@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@/components/UI";
 import ToggleModalExample from "@/components/UI/Modal/ToggleModalExample";
+import Tooltip from "@/components/UI/Tooltip";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { Basket } from "@phosphor-icons/react/dist/ssr/Basket";
 import { Metadata } from "next";
@@ -18,6 +19,9 @@ export const metadata: Metadata = {
 export default function UIPage() {
   return (
     <PageContainer>
+      <section>
+        <Tooltip message="Great message">Hover me to show Tooltip</Tooltip>
+      </section>
       <section>
         <Dropdown label="Label" options={["Item1", "Item2", "Item3"]} />
       </section>

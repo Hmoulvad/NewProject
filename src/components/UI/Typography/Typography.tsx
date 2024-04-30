@@ -21,6 +21,7 @@ type Props<T extends ElementType> = {
   as?: T;
   inverted?: boolean;
   variant?: Variants;
+  className?: string;
 } & PropsWithChildren &
   ComponentPropsWithoutRef<T>;
 
@@ -60,6 +61,7 @@ function getTypographyStyle<T extends ElementType>(
 
 export default function Typography<T extends ElementType>({
   as,
+  className,
   children,
   variant = "body",
   inverted,
@@ -69,7 +71,7 @@ export default function Typography<T extends ElementType>({
 
   return (
     <Element
-      className={clsx(getTypographyStyle(variant, as), {
+      className={clsx(className, getTypographyStyle(variant, as), {
         [styles.inverted]: inverted,
       })}
       {...rest}
