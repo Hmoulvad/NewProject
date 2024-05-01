@@ -1,4 +1,4 @@
-import { Button, PageContainer } from "@/components/UI";
+import { Button } from "@/components/UI";
 import {
   Calender,
   Checkbox,
@@ -9,6 +9,7 @@ import {
 import { RadioGroup } from "@/components/UI/Form/RadioGroup";
 import styles from "./styles.module.css";
 import { Metadata } from "next";
+import { PageContainer } from "@/features/PageContainer";
 
 export const metadata: Metadata = {
   title: "Form",

@@ -1,4 +1,5 @@
-import { Carousel, PageContainer } from "@/components/UI";
+import { Carousel } from "@/components/UI";
+import { PageContainer } from "@/features/PageContainer";
 import { ProductCard } from "@/features/Product";
 import { Metadata } from "next";
 

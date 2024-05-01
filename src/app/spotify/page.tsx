@@ -1,7 +1,8 @@
-import { PageContainer, Typography } from "@/components/UI";
+import { Typography } from "@/components/UI";
+import { PageContainer } from "@/features/PageContainer";
+import { Spotify } from "@/services";
 import { Metadata } from "next";
 import Form from "./_components/Form";
-import { Spotify } from "@/services";
 
 export const metadata: Metadata = {
   title: "Spotify",
