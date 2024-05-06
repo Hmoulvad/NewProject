@@ -8,15 +8,7 @@ export const metadata: Metadata = {
   generator: "Next.js",
   manifest: "/manifest.json",
   creator: "Hannibal B. Moulvad",
-  keywords: [
-    "next.js",
-    "react",
-    "typescript",
-    "next14",
-    "nextjs14",
-    "next-pwa",
-    "pwa",
-  ],
+  keywords: ["next.js", "react", "typescript", "next14", "nextjs14", "pwa"],
   authors: [{ name: "Hannibal B. Moulvad" }],
   icons: [
     { rel: "apple-touch-icon", url: "icons/icon-128x128.png" },
