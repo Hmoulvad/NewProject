@@ -1,4 +1,3 @@
-import { PageContainer } from "@/app/_components/PageContainer";
 import { Typography } from "@/components/UI";
 import { Spotify } from "@/services";
 import { Metadata } from "next";
@@ -27,11 +26,11 @@ export default async function SpotifyPage({ searchParams }: PageProps) {
   });
 
   return (
-    <PageContainer>
+    <>
       <Form />
       {results?.artists?.items.map((artist) => (
         <Typography key={artist.id}>{artist.name}</Typography>
       ))}
-    </PageContainer>
+    </>
   );
 }

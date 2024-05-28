@@ -7,9 +7,8 @@ import {
   TextArea,
 } from "@/components/UI/Form";
 import { RadioGroup } from "@/components/UI/Form/RadioGroup";
-import styles from "./styles.module.css";
 import { Metadata } from "next";
-import { PageContainer } from "@/app/_components/PageContainer";
+import styles from "./styles.module.css";
 
 export const metadata: Metadata = {
   title: "Form",
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function FormPage() {
   return (
-    <PageContainer>
+    <>
       <form className={styles.form}>
         <Input
           placeholder="Search for product..."
@@ -48,6 +47,6 @@ export default function FormPage() {
         />
         <Button type="submit">Submit</Button>
       </form>
-    </PageContainer>
+    </>
   );
 }

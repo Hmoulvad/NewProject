@@ -3,6 +3,7 @@ import { Header } from "@/app/_components/Navigation/Header";
 import Scripts from "@/app/_components/Scripts";
 import "../styles/globals.css";
 import type { Metadata, Viewport } from "next";
+import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
   generator: "Next.js",
@@ -36,7 +37,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        {children}
+        <main className={styles.main}>{children}</main>;
         <Footer />
         <Scripts />
       </body>

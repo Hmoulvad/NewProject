@@ -1,9 +1,0 @@
-.container {
-  display: grid;
-  gap: var(--size-7);
-
-  & > section {
-    display: grid;
-    gap: var(--size-3);
-  }
-}
