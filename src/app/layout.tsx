@@ -1,8 +1,8 @@
 import { Footer } from "@/app/_components/Navigation/Footer";
 import { Header } from "@/app/_components/Navigation/Header";
 import Scripts from "@/app/_components/Scripts";
-import "../styles/globals.css";
 import type { Metadata, Viewport } from "next";
+import "../styles/globals.css";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {

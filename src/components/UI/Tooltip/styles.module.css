@@ -1,6 +1,7 @@
 .container {
   position: relative;
   cursor: pointer;
+  width: fit-content;
 
   &:hover {
     .tooltip {
@@ -12,6 +13,7 @@
 .tooltip {
   position: absolute;
   width: fit-content;
+  white-space: nowrap;
   height: var(--size-7);
   top: calc(var(--size-7) * -1);
   padding-inline: var(--size-2);
