@@ -1,8 +1,17 @@
 .header {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--size-7);
+  display: grid;
+  grid-template-areas: "logo _ search nav";
+  grid-template-columns: auto 1fr auto auto;
+
+  @media (--mobile) {
+    gap: var(--size-3);
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo _ nav" "search search search";
+  }
 
   ul {
     grid-area: nav;
@@ -11,12 +20,6 @@
     list-style: none;
     padding-right: var(--size-3);
     align-items: center;
-  }
-  @media (--mobile) {
-    gap: var(--size-3);
-    grid-template-rows: auto auto;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "logo _ nav" "search search search";
   }
 }
 
