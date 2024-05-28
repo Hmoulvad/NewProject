@@ -1,5 +1,5 @@
-import { Typography } from "@/components/UI";
 import { PageContainer } from "@/app/_components/PageContainer";
+import { Typography } from "@/components/UI";
 import { Spotify } from "@/services";
 import { Metadata } from "next";
 import Form from "./_components/Form";
