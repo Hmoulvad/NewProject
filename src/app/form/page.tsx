@@ -9,7 +9,7 @@ import {
 import { RadioGroup } from "@/components/UI/Form/RadioGroup";
 import styles from "./styles.module.css";
 import { Metadata } from "next";
-import { PageContainer } from "@/features/PageContainer";
+import { PageContainer } from "@/app/_components/PageContainer";
 
 export const metadata: Metadata = {
   title: "Form",

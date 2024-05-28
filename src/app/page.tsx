@@ -1,6 +1,6 @@
 import { Carousel } from "@/components/UI";
-import { PageContainer } from "@/features/PageContainer";
-import { ProductCard } from "@/features/Product";
+import { PageContainer } from "@/app/_components/PageContainer";
+import { ProductCard } from "@/app/_components/Product";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

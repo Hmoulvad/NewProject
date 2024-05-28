@@ -1,6 +1,6 @@
-import { Footer } from "@/features/Navigation/Footer";
-import { Header } from "@/features/Navigation/Header";
-import Scripts from "@/features/Scripts";
+import { Footer } from "@/app/_components/Navigation/Footer";
+import { Header } from "@/app/_components/Navigation/Header";
+import Scripts from "@/app/_components/Scripts";
 import "../styles/globals.css";
 import type { Metadata, Viewport } from "next";
 
