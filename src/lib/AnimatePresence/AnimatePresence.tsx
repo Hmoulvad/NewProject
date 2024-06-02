@@ -1,3 +1,6 @@
+"use client";
+
+import clsx from "clsx";
 import {
   ComponentPropsWithoutRef,
   ElementType,
@@ -12,6 +15,7 @@ type Props<T extends ElementType> = {
   isVisible: boolean;
   variant?: AnimatePresenceVariants;
   animation?: AnimatePresenceType;
+  className?: string;
 } & PropsWithChildren &
   ComponentPropsWithoutRef<T>;
 
@@ -21,6 +25,7 @@ export default function AnimatePresence<T extends ElementType>({
   children,
   variant = "fade-in",
   animation,
+  className,
 }: Props<T>) {
   const Component = as || "div";
   const { isPresent, isExiting, onAnimationEnd } = usePresence(isVisible);
@@ -29,11 +34,14 @@ export default function AnimatePresence<T extends ElementType>({
 
   return (
     <Component
-      className={getAnimationStyles({
-        isExiting,
-        variant,
-        customAnimation: animation,
-      })}
+      className={clsx(
+        getAnimationStyles({
+          isExiting,
+          variant,
+          customAnimation: animation,
+        }),
+        className
+      )}
       onAnimationEnd={onAnimationEnd}
     >
       {children}
