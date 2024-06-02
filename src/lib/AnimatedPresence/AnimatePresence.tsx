@@ -6,8 +6,6 @@ import {
 import getAnimationStyles from "./getAnimationStyles";
 import { AnimatePresenceType, AnimatePresenceVariants } from "./types";
 import usePresence from "./usePresence";
-import clsx from "clsx";
-import styles from "./AnimatePresence.module.css";
 
 type Props<T extends ElementType> = {
   as?: T;
@@ -26,14 +24,6 @@ export default function AnimatePresence<T extends ElementType>({
 }: Props<T>) {
   const Component = as || "div";
   const { isPresent, isExiting, onAnimationEnd } = usePresence(isVisible);
-
-  console.log(
-    getAnimationStyles({
-      isExiting,
-      variant,
-      customAnimation: animation,
-    })
-  );
 
   if (!isPresent) return null;
 
