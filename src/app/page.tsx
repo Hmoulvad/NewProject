@@ -1,5 +1,5 @@
-import { ProductCard } from "@/app/_components/Product";
-import { Carousel } from "@/components/UI";
+import { Carousel } from "@/components/UI/Carousel";
+import { ProductCard } from "@/components/UI/Product";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

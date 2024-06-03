@@ -1,7 +1,8 @@
-import { Button, Modal, Typography } from "@/components/UI";
-import { ModalOperations } from "@/components/UI/Modal/Modal";
+import { Button } from "@/components/UI/Button";
+import { Modal } from "@/components/UI/Modal";
+import { Typography } from "@/components/UI/Typography";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ComponentProps, useRef } from "react";
+import { ComponentProps, useState } from "react";
 
 const meta: Meta<typeof Modal> = {
   title: "UI/Modal",
@@ -24,14 +25,14 @@ export const First: StoryObj<typeof Modal> = {
 };
 
 function OpenModal({ variant }: ComponentProps<typeof Modal>) {
-  const ref = useRef<ModalOperations>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <Button variant="secondary" onClick={() => ref.current?.open()}>
+      <Button variant="secondary" onClick={() => setIsOpen((prev) => !prev)}>
         Open Modal
       </Button>
-      <Modal variant={variant} ref={ref}>
+      <Modal variant={variant} isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Typography inverted>This is content within the Modal</Typography>
       </Modal>
     </>

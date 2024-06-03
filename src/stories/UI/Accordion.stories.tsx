@@ -1,4 +1,4 @@
-import { Accordion } from "@/components/UI";
+import { Accordion } from "@/components/UI/Accordion";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Accordion> = {

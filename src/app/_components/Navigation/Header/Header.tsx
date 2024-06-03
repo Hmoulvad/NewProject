@@ -1,8 +1,9 @@
-import { Button, Link } from "@/components/UI";
+import { Button } from "@/components/UI/Button";
+import { Link } from "@/components/UI/Link";
 import { CodepenLogo } from "@phosphor-icons/react/dist/ssr/CodepenLogo";
 import NextLink from "next/link";
-import styles from "./styles.module.css";
 import { Search } from "./Search";
+import styles from "./styles.module.css";
 
 export default function Header() {
   return (

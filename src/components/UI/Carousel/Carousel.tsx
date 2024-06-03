@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { Typography } from "..";
+import { Typography } from "../Typography";
 import CarouselButtons from "./Buttons";
 import styles from "./styles.module.css";
 

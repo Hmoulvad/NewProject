@@ -1,5 +1,5 @@
-import { Button } from "@/components/UI";
-import AnimatePresence from "@/lib/AnimatePresence";
+import { Button } from "@/components/UI/Button";
+import AnimatePresence from "@/components/UI/AnimatePresence";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof AnimatePresence> = {

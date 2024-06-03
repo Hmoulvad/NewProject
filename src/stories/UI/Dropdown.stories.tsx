@@ -1,4 +1,4 @@
-import { Dropdown } from "@/components/UI";
+import { Dropdown } from "@/components/UI/Dropdown";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Dropdown> = {

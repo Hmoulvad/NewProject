@@ -1,4 +1,4 @@
-import { Button } from "@/components/UI";
+import { Button } from "@/components/UI/Button";
 import {
   Calender,
   Checkbox,

@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/UI";
+import { Skeleton } from "@/components/UI/Skeleton";
 import { Images } from "@phosphor-icons/react/dist/ssr";
 import styles from "./styles.module.css";
 

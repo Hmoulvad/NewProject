@@ -1,4 +1,4 @@
-import { Button } from "@/components/UI";
+import { Button } from "@/components/UI/Button";
 import { CheckboxGroup, Input } from "@/components/UI/Form";
 import styles from "./styles.module.css";
 

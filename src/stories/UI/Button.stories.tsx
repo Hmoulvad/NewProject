@@ -1,4 +1,5 @@
-import { Button, Typography } from "@/components/UI";
+import { Button } from "@/components/UI/Button";
+import { Typography } from "@/components/UI/Typography";
 import { ArrowRight, Basket } from "@phosphor-icons/react";
 import type { Meta, StoryObj } from "@storybook/react";
 

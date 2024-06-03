@@ -1,4 +1,5 @@
-import { Button, Typography } from "@/components/UI";
+import { Button } from "@/components/UI/Button";
+import { Typography } from "@/components/UI/Typography";
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
 import styles from "./styles.module.css";
 

@@ -1,4 +1,4 @@
-import { Typography } from "@/components/UI";
+import { Typography } from "@/components/UI/Typography";
 import { Spotify } from "@/services";
 import { Metadata } from "next";
 import Form from "./_components/Form";
