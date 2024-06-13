@@ -1,5 +1,5 @@
 import { ButtonProps } from "./types";
-import styles from "./styles.module.css";
+import styles from "./Button.module.css";
 
 export function getButtonVariantStyle(variant: ButtonProps["variant"]) {
   switch (variant) {
