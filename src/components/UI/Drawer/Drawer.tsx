@@ -3,11 +3,12 @@
 import { X } from "@phosphor-icons/react/dist/ssr";
 import { ReactNode, useContext } from "react";
 import { createPortal } from "react-dom";
+import { useEventListener } from "usehooks-ts";
 import AnimatePresence from "../AnimatePresence";
 import { Button } from "../Button";
 import { Typography } from "../Typography";
-import styles from "./Drawer.module.css";
 import { Context } from "./Drawer.context";
+import styles from "./Drawer.module.css";
 
 type Props = {
   isOpen: boolean;
@@ -16,6 +17,10 @@ type Props = {
 };
 
 export function Drawer({ isOpen, onClose, children }: Props) {
+  useEventListener("keydown", (event) => {
+    event.key === "Escape" && onClose();
+  });
+
   return createPortal(
     <>
       <Context.Provider value={{ onClose }}>
