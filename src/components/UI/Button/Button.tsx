@@ -33,7 +33,11 @@ export default function Button({
       )}
       {...rest}
     >
-      {children ? <Typography as="span">{children}</Typography> : null}
+      {children ? (
+        <Typography inverted={variant === "primary"} as="span">
+          {children}
+        </Typography>
+      ) : null}
       {icon && icon}
     </button>
   );

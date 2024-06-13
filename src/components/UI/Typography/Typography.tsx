@@ -71,9 +71,14 @@ export default function Typography<T extends ElementType>({
 
   return (
     <Element
-      className={clsx(className, getTypographyStyle(variant, as), {
-        [styles.inverted]: inverted,
-      })}
+      className={clsx(
+        styles.typography,
+        className,
+        getTypographyStyle(variant, as),
+        {
+          [styles.inverted]: inverted,
+        }
+      )}
       {...rest}
     >
       {children}
