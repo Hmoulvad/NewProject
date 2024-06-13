@@ -1,6 +1,6 @@
 import { Typography } from "../../Typography";
 import { InputProps } from "../types";
-import styles from "./styles.module.css";
+import styles from "./Calender.module.css";
 
 type Props = InputProps;
 

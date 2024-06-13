@@ -1,7 +1,7 @@
 import { Check } from "@phosphor-icons/react/dist/ssr";
 import { Typography } from "../../Typography";
 import { InputProps } from "../types";
-import styles from "./styles.module.css";
+import styles from "./Checkbox.module.css";
 
 type Props = {} & InputProps;
 

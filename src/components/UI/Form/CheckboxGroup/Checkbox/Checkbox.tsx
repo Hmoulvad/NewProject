@@ -1,6 +1,6 @@
 import { Typography } from "@/components/UI/Typography";
 import { Check } from "@phosphor-icons/react/dist/ssr";
-import styles from "./styles.module.css";
+import styles from "./Checkbox.module.css";
 
 type Props = {
   label: string;

@@ -1,6 +1,6 @@
 import { DotOutline } from "@phosphor-icons/react/dist/ssr";
 import { Typography } from "../../../Typography";
-import styles from "./styles.module.css";
+import styles from "./Radio.module.css";
 
 type Props = {
   label: string;

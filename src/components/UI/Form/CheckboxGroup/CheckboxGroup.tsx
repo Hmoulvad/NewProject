@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 import { Typography } from "../../Typography";
 import { InputProps } from "../types";
-import styles from "./styles.module.css";
+import styles from "./CheckboxGroup.module.css";
 import { Checkbox } from "./Checkbox";
 
 type Props = {

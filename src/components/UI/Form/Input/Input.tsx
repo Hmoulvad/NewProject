@@ -1,7 +1,7 @@
 import { HTMLInputTypeAttribute } from "react";
 import { Typography } from "../../Typography";
 import { InputProps } from "../types";
-import styles from "./styles.module.css";
+import styles from "./Input.module.css";
 
 type Props = {
   placeholder: string;

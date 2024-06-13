@@ -2,7 +2,7 @@ import { ComponentProps } from "react";
 import { Typography } from "../../Typography";
 import { InputProps } from "../types";
 import Radio from "./Radio/Radio";
-import styles from "./styles.module.css";
+import styles from "./RadioGroup.module.css";
 
 type Props = {
   options: Omit<ComponentProps<typeof Radio>, "name">[];
