@@ -16,6 +16,7 @@ type Props<T extends ElementType> = {
   variant?: AnimatePresenceVariants;
   animation?: AnimatePresenceType;
   className?: string;
+  onClick?: () => void;
 } & PropsWithChildren &
   ComponentPropsWithoutRef<T>;
 
@@ -26,6 +27,7 @@ export default function AnimatePresence<T extends ElementType>({
   variant = "fade-in",
   animation,
   className,
+  onClick,
 }: Props<T>) {
   const Component = as || "div";
   const { isPresent, isExiting, onAnimationEnd } = usePresence(isVisible);
@@ -34,6 +36,7 @@ export default function AnimatePresence<T extends ElementType>({
 
   return (
     <Component
+      onClick={onClick}
       className={clsx(
         getAnimationStyles({
           isExiting,

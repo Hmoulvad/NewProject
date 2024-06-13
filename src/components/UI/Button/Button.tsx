@@ -12,6 +12,7 @@ export default function Button({
   icon,
   size = "medium",
   variant = "primary",
+  fill,
   ...rest
 }: Props) {
   const fallbackAriaLabel =
@@ -27,6 +28,7 @@ export default function Button({
         {
           [styles.withIcon]: Boolean(icon),
           [styles.onlyIcon]: !children && icon,
+          [styles.fill]: fill,
         }
       )}
       {...rest}

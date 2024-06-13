@@ -14,6 +14,7 @@
   text-decoration: none;
   border: none;
   gap: var(--size-2);
+  border: var(--border-size-1) solid var(--border-color);
 
   & > svg {
     width: var(--icon-size);
@@ -28,11 +29,13 @@
 .primary {
   --color: var(--secondary-color);
   --background-color: var(--primary-color);
+  --border-color: var(--secondary-color);
 }
 
 .secondary {
   --color: var(--primary-color);
-  border: var(--border-size-1) solid var(--primary-color);
+  --background-color: var(--secondary-color);
+  --border-color: var(--primary-color);
 }
 
 .small {
@@ -54,4 +57,8 @@
   width: var(--height);
   padding-inline: 0;
   justify-content: center;
+}
+
+.fill {
+  width: 100%;
 }
