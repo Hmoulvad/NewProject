@@ -1,15 +1,29 @@
-import NextLink from "next/link";
+import clsx from "clsx";
+import NextLink, { LinkProps } from "next/link";
 import { Typography } from "../Typography";
 import styles from "./styles.module.css";
 import { SharedLinkProps } from "./types";
 
-type Props = SharedLinkProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+type Props = SharedLinkProps &
+  LinkProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export default function Link({ children, ...rest }: Props) {
+export default function Link({
+  children,
+  className,
+  inverted,
+  ...rest
+}: Props) {
   const fallbackAiraLabel =
     typeof children === "string" ? (children as string) : "";
   return (
-    <NextLink aria-label={fallbackAiraLabel} className={styles.link} {...rest}>
+    <NextLink
+      aria-label={fallbackAiraLabel}
+      className={clsx(styles.link, className, {
+        [styles.inverted]: inverted,
+      })}
+      {...rest}
+    >
       <Typography as="span">{children}</Typography>
     </NextLink>
   );

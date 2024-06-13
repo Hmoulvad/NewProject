@@ -1,6 +1,6 @@
 "use client";
 
-import { X } from "@phosphor-icons/react/dist/ssr";
+import { X } from "@phosphor-icons/react/dist/ssr/X";
 import { ReactNode, useContext } from "react";
 import { createPortal } from "react-dom";
 import { useEventListener } from "usehooks-ts";
@@ -9,6 +9,7 @@ import { Button } from "../Button";
 import { Typography } from "../Typography";
 import { Context } from "./Drawer.context";
 import styles from "./Drawer.module.css";
+import { isBrowser } from "@/app/_lib/isBrowser";
 
 type Props = {
   isOpen: boolean;
@@ -20,6 +21,10 @@ export function Drawer({ isOpen, onClose, children }: Props) {
   useEventListener("keydown", (event) => {
     event.key === "Escape" && onClose();
   });
+
+  if (!isBrowser) {
+    return null;
+  }
 
   return createPortal(
     <>

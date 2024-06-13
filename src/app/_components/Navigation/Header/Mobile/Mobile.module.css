@@ -1,0 +1,13 @@
+.header {
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  gap: var(--size-3);
+  grid-template-rows: auto auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo _ toggle";
+}
+
+.logo {
+  grid-area: logo;
+}

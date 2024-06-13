@@ -1,4 +1,7 @@
 .link {
+  --color: var(--primary-color);
+  --hover-color: var(--tertiary-color);
+
   display: block;
   text-decoration: underline;
   text-decoration-color: var(--primary-color);
@@ -8,14 +11,19 @@
   transition: text-decoration-color var(--timing-short);
 
   span {
-    color: var(--primary-color);
+    color: var(--color);
     transition: color var(--timing-short);
   }
 
   &:hover {
-    text-decoration-color: var(--tertiary-color);
+    text-decoration-color: var(--hover-color);
     span {
-      color: var(--tertiary-color);
+      color: var(--hover-color);
     }
+  }
+
+  &.inverted {
+    --color: var(--secondary-color);
+    --hover-color: var(--tertiary-color);
   }
 }
