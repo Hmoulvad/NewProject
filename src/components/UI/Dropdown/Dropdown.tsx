@@ -4,7 +4,7 @@ import { ArrowDown } from "@phosphor-icons/react/dist/ssr/ArrowDown";
 import clsx from "clsx";
 import { useSelect } from "downshift";
 import { Typography } from "../Typography";
-import styles from "./styles.module.css";
+import styles from "./Dropdown.module.css";
 
 type Props = {
   defaultOption?: string;

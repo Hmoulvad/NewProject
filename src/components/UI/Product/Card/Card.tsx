@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/UI/Skeleton";
 import { Images } from "@phosphor-icons/react/dist/ssr";
-import styles from "./styles.module.css";
+import styles from "./Card.module.css";
 
 export default function ProductCard() {
   return (

@@ -4,7 +4,7 @@ import {
   ElementType,
   PropsWithChildren,
 } from "react";
-import styles from "./styles.module.css";
+import styles from "./Typography.module.css";
 
 type Variants =
   | "display1"

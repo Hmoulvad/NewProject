@@ -1,7 +1,7 @@
 import { useId } from "react";
 import { Typography } from "../Typography";
 import CarouselButtons from "./Buttons";
-import styles from "./styles.module.css";
+import styles from "./Carousel.module.css";
 
 type Props = {
   title: string;

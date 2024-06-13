@@ -1,6 +1,6 @@
 import { PropsWithChildren, ReactNode } from "react";
 import { Typography } from "../Typography";
-import styles from "./styles.module.css";
+import styles from "./Tooltip.module.css";
 
 type Props = {
   message: ReactNode;

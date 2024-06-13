@@ -1,7 +1,6 @@
 import clsx from "clsx";
-import { LinkProps } from "next/link";
 import { Typography } from "../Typography";
-import styles from "./styles.module.css";
+import styles from "./Link.module.css";
 import { SharedLinkProps } from "./types";
 
 type Props = SharedLinkProps & React.ButtonHTMLAttributes<HTMLButtonElement>;

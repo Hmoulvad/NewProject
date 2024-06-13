@@ -2,7 +2,7 @@
 
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "../Button";
-import styles from "./styles.module.css";
+import styles from "./Carousel.module.css";
 
 type Props = {
   targetId: string;
