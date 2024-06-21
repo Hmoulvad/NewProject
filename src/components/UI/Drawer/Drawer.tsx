@@ -1,5 +1,6 @@
 "use client";
 
+import { isBrowser } from "@/app/_lib/isBrowser";
 import { X } from "@phosphor-icons/react/dist/ssr/X";
 import { ReactNode, useContext } from "react";
 import { createPortal } from "react-dom";
@@ -9,7 +10,6 @@ import { Button } from "../Button";
 import { Typography } from "../Typography";
 import { Context } from "./Drawer.context";
 import styles from "./Drawer.module.css";
-import { isBrowser } from "@/app/_lib/isBrowser";
 
 type Props = {
   isOpen: boolean;
@@ -30,6 +30,12 @@ export function Drawer({ isOpen, onClose, children }: Props) {
     <>
       <Context.Provider value={{ onClose }}>
         <AnimatePresence
+          as="div"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="drawer-title"
+          autoFocus={isOpen}
+          tabIndex={-1}
           isVisible={isOpen}
           animation={{
             entering: styles["slide-in"],
@@ -40,6 +46,8 @@ export function Drawer({ isOpen, onClose, children }: Props) {
           {children}
         </AnimatePresence>
         <AnimatePresence
+          as="div"
+          aria-hidden="true"
           onClick={onClose}
           variant="fade-in"
           isVisible={isOpen}
@@ -55,7 +63,7 @@ Drawer.Header = function DrawerHeader({ title }: { title: string }) {
   const { onClose } = useContext(Context);
   return (
     <header className={styles.header}>
-      <Typography inverted variant="display3">
+      <Typography id="drawer-title" inverted variant="display3">
         {title}
       </Typography>
       {onClose ? <Button onClick={onClose} icon={<X />} /> : null}
