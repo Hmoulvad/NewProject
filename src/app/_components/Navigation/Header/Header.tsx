@@ -1,12 +1,10 @@
+import getDevice from "@/app/_lib/utils/getDevice";
 import DesktopHeader from "./Desktop";
 import MobileHeader from "./Mobile";
 
-type Props = {
-  viewport: string;
-};
-
-export default function Header({ viewport }: Props) {
-  if (viewport === "mobile") {
+export default function Header() {
+  const { isMobile } = getDevice();
+  if (isMobile) {
     return <MobileHeader />;
   }
   return <DesktopHeader />;

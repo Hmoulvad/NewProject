@@ -2,8 +2,9 @@ import Footer from "@/app/_components/Navigation/Footer";
 import Header from "@/app/_components/Navigation/Header";
 import Scripts from "@/app/_components/Scripts";
 import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
 import "../styles/globals.css";
+import DeviceProvider from "./_lib/context/DeviceProvider";
+import getDevice from "./_lib/utils/getDevice";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
@@ -31,20 +32,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headersList = headers();
-  const viewport = headersList.get("x-viewport") || "";
-
+  const { isMobile } = getDevice();
   return (
     <html lang="en">
       <head>
         <link rel="stylesheet" href="https://unpkg.com/open-props" />
       </head>
       <body>
-        <Header viewport={viewport} />
-        <main className={styles.main}>{children}</main>
-        <Footer />
-        <Scripts />
-        <div id="portal-container" />
+        <DeviceProvider isMobile={isMobile}>
+          <Header />
+          <main className={styles.main}>{children}</main>
+          <Footer />
+          <Scripts />
+          <div id="portal-container" />
+        </DeviceProvider>
       </body>
     </html>
   );

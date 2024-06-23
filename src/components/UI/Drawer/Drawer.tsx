@@ -1,6 +1,6 @@
 "use client";
 
-import { isBrowser } from "@/app/_lib/isBrowser";
+import { isBrowser } from "@/app/_lib/utils/isBrowser";
 import { X } from "@phosphor-icons/react/dist/ssr/X";
 import { ReactNode, useContext } from "react";
 import { createPortal } from "react-dom";
