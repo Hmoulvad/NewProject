@@ -19,6 +19,9 @@ export default function DesktopHeader() {
         <li>
           <Link href="/spotify">Spotify</Link>
         </li>
+        <li>
+          <Link href="/form">Form</Link>
+        </li>
       </ul>
     </header>
   );

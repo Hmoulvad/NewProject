@@ -9,6 +9,11 @@ export default function DrawerContent() {
           Spotify
         </Link>
       </li>
+      <li>
+        <Link inverted href="/form">
+          Form
+        </Link>
+      </li>
     </ul>
   );
 }
