@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowLeft } from "@phosphor-icons/react/dist/ssr/ArrowLeft";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { Button } from "../Button";
 import styles from "./Carousel.module.css";
 
@@ -31,8 +32,16 @@ export default function CarouselButtons({ targetId }: Props) {
 
   return (
     <div className={styles.navigate}>
-      <Button onClick={scrollToStart} icon={<ArrowLeft />} />
-      <Button onClick={scrollToEnd} icon={<ArrowRight />} />
+      <Button
+        onClick={scrollToStart}
+        icon={<ArrowLeft />}
+        aria-label="Scroll to start"
+      />
+      <Button
+        onClick={scrollToEnd}
+        icon={<ArrowRight />}
+        aria-label="Scroll to end"
+      />
     </div>
   );
 }

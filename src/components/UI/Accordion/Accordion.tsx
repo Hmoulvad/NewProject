@@ -16,16 +16,14 @@ export default function Accordion({ title, children }: Props) {
 
   return (
     <div className={styles.container}>
-      <Typography
+      <button
         className={styles.header}
         onClick={() => setIsOpen((prev) => !prev)}
-        as="button"
-        role="button"
         aria-expanded={isOpen}
         aria-controls={contentId}
       >
-        {title}
-      </Typography>
+        <Typography as="span">{title}</Typography>
+      </button>
       <div
         id={contentId}
         className={clsx(styles.contentWrapper, {
