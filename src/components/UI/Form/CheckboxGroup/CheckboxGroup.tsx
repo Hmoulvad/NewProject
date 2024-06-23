@@ -2,7 +2,7 @@ import { ComponentProps } from "react";
 import { Typography } from "../../Typography";
 import { InputProps } from "../types";
 import styles from "./CheckboxGroup.module.css";
-import { Checkbox } from "./Checkbox";
+import { Checkbox } from "../Checkbox";
 
 type Props = {
   options: Omit<ComponentProps<typeof Checkbox>, "name">[];

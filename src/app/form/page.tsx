@@ -1,14 +1,12 @@
 import { Button } from "@/components/UI/Button";
-import {
-  Calender,
-  Checkbox,
-  Input,
-  Select,
-  TextArea,
-} from "@/components/UI/Form";
 import { RadioGroup } from "@/components/UI/Form/RadioGroup";
 import { Metadata } from "next";
 import styles from "./styles.module.css";
+import { Input } from "@/components/UI/Form/Input";
+import { TextArea } from "@/components/UI/Form/TextArea";
+import { Checkbox } from "@/components/UI/Form/Checkbox";
+import { Select } from "@/components/UI/Form/Select";
+import { Calender } from "@/components/UI/Form/Calender";
 
 export const metadata: Metadata = {
   title: "Form",

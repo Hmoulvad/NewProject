@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 import { Typography } from "../../Typography";
 import { InputProps } from "../types";
-import Radio from "./Radio/Radio";
+import Radio from "../Radio/Radio";
 import styles from "./RadioGroup.module.css";
 
 type Props = {

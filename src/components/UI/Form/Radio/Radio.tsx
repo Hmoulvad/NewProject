@@ -1,6 +1,6 @@
-import { Typography } from "@/components/UI/Typography";
-import { Check } from "@phosphor-icons/react/dist/ssr";
-import styles from "./Checkbox.module.css";
+import { DotOutline } from "@phosphor-icons/react/dist/ssr";
+import { Typography } from "../../Typography";
+import styles from "./Radio.module.css";
 
 type Props = {
   label: string;
@@ -9,24 +9,19 @@ type Props = {
   defaultChecked?: boolean;
 };
 
-export default function Checkbox({
-  name,
-  label,
-  value,
-  defaultChecked,
-}: Props) {
+export default function Radio({ label, name, value, defaultChecked }: Props) {
   return (
     <label className={styles.label}>
       <Typography htmlFor={name}>{label}</Typography>
       <Typography
         defaultChecked={defaultChecked}
         value={value}
-        type="checkbox"
+        type="radio"
         name={name}
         as="input"
       />
-      <span className={styles.checkbox}>
-        <Check />
+      <span className={styles.radio}>
+        <DotOutline weight="fill" />
       </span>
     </label>
   );

@@ -1,15 +1,30 @@
+import { Typography } from "@/components/UI/Typography";
 import { Check } from "@phosphor-icons/react/dist/ssr";
-import { Typography } from "../../Typography";
-import { InputProps } from "../types";
 import styles from "./Checkbox.module.css";
 
-type Props = {} & InputProps;
+type Props = {
+  defaultChecked?: boolean;
+  label: string;
+  name: string;
+  value?: string;
+};
 
-export default function Checkbox({ name, label }: Props) {
+export default function Checkbox({
+  name,
+  label,
+  value,
+  defaultChecked,
+}: Props) {
   return (
     <label className={styles.label}>
       <Typography htmlFor={name}>{label}</Typography>
-      <Typography type="checkbox" name={name} as="input" />
+      <Typography
+        defaultChecked={defaultChecked}
+        value={value}
+        type="checkbox"
+        name={name}
+        as="input"
+      />
       <span className={styles.checkbox}>
         <Check />
       </span>
