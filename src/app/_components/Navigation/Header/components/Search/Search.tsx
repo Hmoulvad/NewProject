@@ -13,7 +13,11 @@ export default function Search() {
           type="text"
           name="search"
         />
-        <Button type="submit" icon={<MagnifyingGlass />} />
+        <Button
+          type="submit"
+          icon={<MagnifyingGlass />}
+          aria-label="Submit search"
+        />
       </form>
     </search>
   );

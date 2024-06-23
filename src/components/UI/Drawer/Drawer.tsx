@@ -66,7 +66,9 @@ Drawer.Header = function DrawerHeader({ title }: { title: string }) {
       <Typography id="drawer-title" inverted variant="display3">
         {title}
       </Typography>
-      {onClose ? <Button onClick={onClose} icon={<X />} /> : null}
+      {onClose ? (
+        <Button aria-label="Close drawer" onClick={onClose} icon={<X />} />
+      ) : null}
     </header>
   );
 };

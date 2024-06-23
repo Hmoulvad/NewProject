@@ -34,7 +34,11 @@ export default function ButtonAsLink({
       )}
       {...rest}
     >
-      <Typography as="span">{children}</Typography>
+      {children ? (
+        <Typography inverted={variant === "primary"} as="span">
+          {children}
+        </Typography>
+      ) : null}
       {icon && icon}
     </NextLink>
   );

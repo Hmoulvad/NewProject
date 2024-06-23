@@ -17,6 +17,7 @@ export default function ToggleDrawer({ children }: Props) {
         onClick={() => setIsOpen(true)}
         className={styles.container}
         icon={<List />}
+        aria-label="Open navigation"
       />
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Drawer.Content>{children}</Drawer.Content>
