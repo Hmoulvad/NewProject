@@ -5,6 +5,7 @@ import Drawer from "@/components/UI/Drawer";
 import { useState } from "react";
 import { List } from "@phosphor-icons/react/dist/ssr";
 import styles from "./ToggleDrawer.module.css";
+import { ariaTranslations } from "@/translations/aria";
 
 type Props = React.PropsWithChildren;
 
@@ -17,7 +18,7 @@ export default function ToggleDrawer({ children }: Props) {
         onClick={() => setIsOpen(true)}
         className={styles.container}
         icon={<List />}
-        aria-label="Open navigation"
+        aria-label={ariaTranslations.navigation.open}
       />
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Drawer.Content>{children}</Drawer.Content>

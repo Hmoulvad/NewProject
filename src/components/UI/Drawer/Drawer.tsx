@@ -1,6 +1,7 @@
 "use client";
 
 import { isBrowser } from "@/app/_lib/utils/isBrowser";
+import { ariaTranslations } from "@/translations/aria";
 import { X } from "@phosphor-icons/react/dist/ssr/X";
 import { ReactNode, useContext } from "react";
 import { createPortal } from "react-dom";
@@ -67,7 +68,11 @@ Drawer.Header = function DrawerHeader({ title }: { title: string }) {
         {title}
       </Typography>
       {onClose ? (
-        <Button aria-label="Close drawer" onClick={onClose} icon={<X />} />
+        <Button
+          aria-label={ariaTranslations.drawer.close}
+          onClick={onClose}
+          icon={<X />}
+        />
       ) : null}
     </header>
   );

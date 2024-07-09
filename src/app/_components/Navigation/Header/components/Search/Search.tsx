@@ -2,13 +2,15 @@ import { Button } from "@/components/UI/Button";
 import { Typography } from "@/components/UI/Typography";
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
 import styles from "./styles.module.css";
+import { ariaTranslations } from "@/translations/aria";
+import { textTranslations } from "@/translations/text";
 
 export default function Search() {
   return (
     <search className={styles.search}>
       <form>
         <Typography
-          placeholder="Search on this website"
+          placeholder={textTranslations.search.placeholder}
           as="input"
           type="text"
           name="search"
@@ -16,7 +18,7 @@ export default function Search() {
         <Button
           type="submit"
           icon={<MagnifyingGlass />}
-          aria-label="Submit search"
+          aria-label={ariaTranslations.search.submit}
         />
       </form>
     </search>

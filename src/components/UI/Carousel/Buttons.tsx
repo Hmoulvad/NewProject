@@ -4,6 +4,7 @@ import { ArrowLeft } from "@phosphor-icons/react/dist/ssr/ArrowLeft";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { Button } from "../Button";
 import styles from "./Carousel.module.css";
+import { ariaTranslations } from "@/translations/aria";
 
 type Props = {
   targetId: string;
@@ -35,12 +36,12 @@ export default function CarouselButtons({ targetId }: Props) {
       <Button
         onClick={scrollToStart}
         icon={<ArrowLeft />}
-        aria-label="Scroll to start"
+        aria-label={ariaTranslations.carousel.scroll.start}
       />
       <Button
         onClick={scrollToEnd}
         icon={<ArrowRight />}
-        aria-label="Scroll to end"
+        aria-label={ariaTranslations.carousel.scroll.end}
       />
     </div>
   );
