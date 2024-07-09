@@ -1,7 +1,7 @@
-@import "open-props/sizes";
-@import "open-props/fonts";
-@import "open-props/colors";
-@import "open-props/borders";
+@import url("https://unpkg.com/open-props/sizes.min.css");
+@import url("https://unpkg.com/open-props/fonts.min.css");
+@import url("https://unpkg.com/open-props/colors.min.css");
+@import url("https://unpkg.com/open-props/borders.min.css");
 
 :root {
   --primary-color: #000;
