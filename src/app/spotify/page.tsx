@@ -1,6 +1,6 @@
 import { Typography } from "@/components/UI/Typography";
-import { Spotify } from "@/services";
 import { Metadata } from "next";
+import { Spotify } from "../_lib/data";
 import Form from "./_components/Form";
 
 export const metadata: Metadata = {
