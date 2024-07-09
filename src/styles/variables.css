@@ -1,3 +1,8 @@
+@import "open-props/sizes";
+@import "open-props/fonts";
+@import "open-props/colors";
+@import "open-props/borders";
+
 :root {
   --primary-color: #000;
   --secondary-color: #fff;

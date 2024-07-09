@@ -24,9 +24,6 @@ export default function RootLayout({
   const { isMobile } = getDevice();
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://unpkg.com/open-props" />
-      </head>
       <body>
         <DeviceProvider isMobile={isMobile}>
           <Header />
