@@ -1,0 +1,28 @@
+.table {
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+  thead {
+    background-color: var(--gray-3);
+    tr th {
+      white-space: nowrap;
+      text-align: left;
+      padding: var(--size-3);
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        white-space: nowrap;
+        text-align: left;
+        padding: var(--size-3);
+        background-color: var(--primary-color);
+
+        &.isEven {
+          background-color: var(--gray-1);
+        }
+      }
+    }
+  }
+}
