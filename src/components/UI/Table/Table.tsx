@@ -13,7 +13,6 @@ type Props<T> = {
   columns: Column<T>[];
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Table<T extends { [key: string]: any }>({ columns, data }: Props<T>) {
   return (
     <table className={styles.table}>
