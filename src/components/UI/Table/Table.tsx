@@ -15,41 +15,43 @@ type Props<T> = {
 
 function Table<T extends { [key: string]: any }>({ columns, data }: Props<T>) {
   return (
-    <table className={styles.table}>
-      <thead>
-        <tr>
-          {columns.map((column, index) => (
-            <th key={`${String(column.label)}-${index}`}>
-              {typeof column.label !== "object" ? (
-                <Typography bold>{column.label}</Typography>
-              ) : (
-                column.label
-              )}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((row, rowIndex) => (
-          <tr key={rowIndex}>
+    <div className={styles.container}>
+      <table className={styles.table}>
+        <thead>
+          <tr>
             {columns.map((column, index) => (
-              <td
-                key={`${String(column.label)}-${index}`}
-                className={clsx({
-                  [styles.isEven]: rowIndex % 2,
-                })}
-              >
-                {typeof column.value(row) !== "object" ? (
-                  <Typography>{column.value(row)}</Typography>
+              <th key={`${String(column.label)}-${index}`}>
+                {typeof column.label !== "object" ? (
+                  <Typography bold>{column.label}</Typography>
                 ) : (
-                  column.value(row)
+                  column.label
                 )}
-              </td>
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {columns.map((column, index) => (
+                <td
+                  key={`${String(column.label)}-${index}`}
+                  className={clsx({
+                    [styles.isEven]: rowIndex % 2,
+                  })}
+                >
+                  {typeof column.value(row) !== "object" ? (
+                    <Typography>{column.value(row)}</Typography>
+                  ) : (
+                    column.value(row)
+                  )}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
