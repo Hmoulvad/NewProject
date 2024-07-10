@@ -4,9 +4,8 @@ import styles from "./Table.module.css";
 import { Typography } from "../Typography";
 
 type Column<T> = {
-  key: keyof T;
-  label: React.ReactNode;
-  render?: (row: T) => React.ReactNode;
+  label: React.ReactNode | string;
+  value: (row: T) => React.ReactNode;
 };
 
 type Props<T> = {
@@ -21,8 +20,12 @@ function Table<T extends { [key: string]: any }>({ columns, data }: Props<T>) {
       <thead>
         <tr>
           {columns.map((column, index) => (
-            <th key={`${String(column.key)}-${index}`}>
-              <Typography bold>{column.label}</Typography>
+            <th key={`${String(column.label)}-${index}`}>
+              {typeof column.label !== "object" ? (
+                <Typography bold>{column.label}</Typography>
+              ) : (
+                column.label
+              )}
             </th>
           ))}
         </tr>
@@ -32,15 +35,15 @@ function Table<T extends { [key: string]: any }>({ columns, data }: Props<T>) {
           <tr key={rowIndex}>
             {columns.map((column, index) => (
               <td
-                key={`${String(column.key)}-${index}`}
+                key={`${String(column.label)}-${index}`}
                 className={clsx({
                   [styles.isEven]: rowIndex % 2,
                 })}
               >
-                {column.render ? (
-                  <Typography>{column.render(row)}</Typography>
+                {typeof column.value(row) !== "object" ? (
+                  <Typography>{column.value(row)}</Typography>
                 ) : (
-                  <Typography>{row[column.key]}</Typography>
+                  column.value(row)
                 )}
               </td>
             ))}
