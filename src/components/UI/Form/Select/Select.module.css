@@ -7,7 +7,8 @@
   & > select {
     height: var(--size-8);
     appearance: none;
-    padding-inline: var(--size-3);
+    padding-left: var(--size-3);
+    padding-right: calc(var(--size-3) * 2);
     border: var(--border-size-1) solid white;
     background-color: transparent;
     cursor: pointer;

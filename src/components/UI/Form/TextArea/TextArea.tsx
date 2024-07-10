@@ -5,7 +5,6 @@ import styles from "./TextArea.module.css";
 
 type Props = {
   placeholder: string;
-  type?: HTMLInputTypeAttribute;
 } & InputProps;
 
 export default function TextArea({ label, ...rest }: Props) {
