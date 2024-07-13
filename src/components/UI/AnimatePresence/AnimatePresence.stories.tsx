@@ -1,18 +1,19 @@
-import { Button } from "@/components/UI/Button";
-import AnimatePresence from "@/components/UI/AnimatePresence";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof AnimatePresence> = {
-  title: "UI/AnimatePresence",
+import AnimatePresence from "./AnimatePresence";
+import { Button } from "../Button";
+
+const meta = {
   component: AnimatePresence,
-};
+} satisfies Meta<typeof AnimatePresence>;
+
 export default meta;
 
-export const First: StoryObj<typeof AnimatePresence> = {
-  name: "AnimatePresence",
-  render: (args) => (
-    <AnimatePresence as="section" {...args}>
-      <Button>You can see me</Button>
-    </AnimatePresence>
-  ),
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    isVisible: true,
+    children: <Button>You can see me</Button>,
+  },
 };
