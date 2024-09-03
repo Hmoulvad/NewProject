@@ -4,6 +4,7 @@ import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import Button from "./Button";
 
 const meta = {
+  title: "UI/Button",
   component: Button,
 } satisfies Meta<typeof Button>;
 
@@ -17,7 +18,7 @@ export const Default: Story = {
   },
 };
 
-export const Icon: Story = {
+export const WithIcon: Story = {
   args: {
     children: "Click me",
     icon: <ArrowRight />,

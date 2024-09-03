@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import TextArea from "./TextArea";
 
 const meta = {
+  title: "UI/Form/TextArea",
   component: TextArea,
 } satisfies Meta<typeof TextArea>;
 

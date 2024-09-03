@@ -1,12 +1,10 @@
 .base {
   width: var(--width);
   height: var(--height);
-  background: linear-gradient(
-    110deg,
-    var(--gray-4) 8%,
-    var(--gray-1) 18%,
-    var(--gray-4) 33%
-  );
+  background: linear-gradient(110deg,
+      var(--gray-4) 8%,
+      var(--gray-1) 18%,
+      var(--gray-4) 33%);
   background-size: 200% 100%;
   animation: 1s shine linear infinite;
 }

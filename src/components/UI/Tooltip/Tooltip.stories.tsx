@@ -11,8 +11,7 @@ const meta: Meta<typeof Tooltip> = {
 };
 export default meta;
 
-export const First: StoryObj<typeof Tooltip> = {
-  name: "Tooltip",
+export const Default: StoryObj<typeof Tooltip> = {
   render: (args) => (
     <section style={{ padding: "1rem" }}>
       <Tooltip {...args} />

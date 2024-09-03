@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Accordion from "./Accordion";
 
 const meta = {
+  title: "UI/Accordion",
   component: Accordion,
 } satisfies Meta<typeof Accordion>;
 

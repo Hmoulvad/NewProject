@@ -11,7 +11,7 @@ const meta: Meta<typeof Link> = {
 };
 export default meta;
 
-export const First: StoryObj<typeof Link> = {
+export const Default: StoryObj<typeof Link> = {
   name: "Link",
   render: (args) => <Link {...args} />,
 };

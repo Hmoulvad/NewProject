@@ -12,7 +12,7 @@ const meta: Meta<typeof Typography> = {
 };
 export default meta;
 
-export const Component: StoryObj<typeof Typography> = {
+export const Default: StoryObj<typeof Typography> = {
   name: "Component",
   render: (args) => <Typography {...args} />,
 };

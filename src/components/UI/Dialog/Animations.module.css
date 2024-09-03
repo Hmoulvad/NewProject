@@ -1,0 +1,102 @@
+/* Drawer animations */
+.slide-in {
+  animation-duration: var(--timing-medium);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-name: slideInRight;
+
+  @media (--tablet-down) {
+    animation-name: slideInBottom;
+  }
+}
+
+.slide-out {
+  animation-duration: var(--timing-medium);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-name: slideOutRight;
+
+  @media (--tablet-down) {
+    animation-name: slideOutBottom;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutBottom {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* Modal Animations */
+
+.fade-in {
+  animation-duration: var(--animation-medium);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-name: fadeIn;
+}
+
+.fade-out {
+  animation-duration: var(--animation-medium);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    scale: 1;
+  }
+
+  to {
+    opacity: 0;
+    scale: 0.5;
+  }
+}

@@ -7,8 +7,7 @@ const meta: Meta<typeof Skeleton> = {
 };
 export default meta;
 
-export const Component: StoryObj<typeof Skeleton> = {
-  name: "Skeleton",
+export const Default: StoryObj<typeof Skeleton> = {
   args: undefined,
   render: (args) => (
     <section

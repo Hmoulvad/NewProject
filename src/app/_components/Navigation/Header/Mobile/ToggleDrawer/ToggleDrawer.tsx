@@ -1,11 +1,11 @@
 "use client";
 
 import { Button } from "@/components/UI/Button";
-import Drawer from "@/components/UI/Drawer";
 import { useState } from "react";
 import { List } from "@phosphor-icons/react/dist/ssr";
 import styles from "./ToggleDrawer.module.css";
 import { ariaTranslations } from "@/translations/aria";
+import Dialog, { DialogContent } from "@/components/UI/Dialog";
 
 type Props = React.PropsWithChildren;
 
@@ -20,9 +20,9 @@ export default function ToggleDrawer({ children }: Props) {
         icon={<List />}
         aria-label={ariaTranslations.navigation.open}
       />
-      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Content>{children}</Drawer.Content>
-      </Drawer>
+      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <DialogContent>{children}</DialogContent>
+      </Dialog>
     </>
   );
 }

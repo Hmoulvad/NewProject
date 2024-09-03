@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import CheckboxGroup from "./CheckboxGroup";
 
 const meta = {
+  title: "UI/Form/CheckboxGroup",
   component: CheckboxGroup,
 } satisfies Meta<typeof CheckboxGroup>;
 

@@ -16,7 +16,7 @@
   gap: var(--size-2);
   border: var(--border-size-1) solid var(--border-color);
 
-  & > svg {
+  &>svg {
     width: var(--icon-size);
     height: var(--icon-size);
   }

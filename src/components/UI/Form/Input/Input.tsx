@@ -16,3 +16,4 @@ export default function Input({ label, ...rest }: Props) {
     </Typography>
   );
 }
+

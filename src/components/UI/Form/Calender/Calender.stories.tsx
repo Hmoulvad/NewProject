@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Calender from "./Calender";
 
 const meta = {
+  title: "UI/Form/Calender",
   component: Calender,
 } satisfies Meta<typeof Calender>;
 

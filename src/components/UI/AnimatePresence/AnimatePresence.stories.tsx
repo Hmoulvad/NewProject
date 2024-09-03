@@ -4,6 +4,7 @@ import AnimatePresence from "./AnimatePresence";
 import { Button } from "../Button";
 
 const meta = {
+  title: "UI/AnimatePresence",
   component: AnimatePresence,
 } satisfies Meta<typeof AnimatePresence>;
 
