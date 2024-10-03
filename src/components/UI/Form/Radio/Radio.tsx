@@ -18,7 +18,6 @@ export default function Radio({ label, name, value, defaultChecked }: Props) {
         value={value}
         type="radio"
         name={name}
-        as="input"
       />
       <span className={styles.radio}>
         <DotOutline weight="fill" />
