@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { JSX, useId } from "react";
 import { Typography } from "../Typography";
 import CarouselButtons from "./Buttons";
 import styles from "./Carousel.module.css";

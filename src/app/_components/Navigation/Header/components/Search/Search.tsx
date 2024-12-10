@@ -1,7 +1,7 @@
 import { Button } from "@/components/UI/Button";
 import { Typography } from "@/components/UI/Typography";
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
-import styles from "./styles.module.css";
+import styles from "./search.module.css";
 import { ariaTranslations } from "@/translations/aria";
 import { textTranslations } from "@/translations/text";
 

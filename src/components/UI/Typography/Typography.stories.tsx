@@ -18,7 +18,6 @@ export const Default: StoryObj<typeof Typography> = {
 };
 
 export const Variants: StoryObj<typeof Typography> = {
-  name: "Variants",
   args: undefined,
   render: () => (
     <section style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/UI/Button";
 import { CheckboxGroup } from "@/components/UI/Form/CheckboxGroup";
 import { Input } from "@/components/UI/Form/Input";
-import styles from "./styles.module.css";
+import styles from "./form.module.css";
 
 export default function Form() {
   return (

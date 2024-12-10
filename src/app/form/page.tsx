@@ -1,7 +1,7 @@
 import { Button } from "@/components/UI/Button";
 import { RadioGroup } from "@/components/UI/Form/RadioGroup";
 import { Metadata } from "next";
-import styles from "./styles.module.css";
+import styles from "./form.module.css";
 import { Input } from "@/components/UI/Form/Input";
 import { TextArea } from "@/components/UI/Form/TextArea";
 import { Checkbox } from "@/components/UI/Form/Checkbox";

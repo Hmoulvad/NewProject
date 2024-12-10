@@ -9,6 +9,5 @@ const meta: Meta<typeof Table> = {
 export default meta;
 
 export const Loading: StoryObj<typeof Table> = {
-  name: "Loading",
   render: () => <TableSkeleton />,
 };
