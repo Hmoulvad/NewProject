@@ -8,7 +8,7 @@ type Props = {
   options: Omit<ComponentProps<typeof Checkbox>, "name">[];
 } & InputProps;
 
-export default function RadioGroup({ label, name, options }: Props) {
+export default function CheckboxGroup({ label, name, options }: Props) {
   return (
     <div className={styles.radioGroup}>
       <Typography>{label}</Typography>

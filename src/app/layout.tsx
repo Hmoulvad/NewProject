@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { isMobile } = getDevice();
+  const { isMobile } = await getDevice();
   return (
     <html lang="en">
       <body>
